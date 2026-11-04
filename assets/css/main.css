@@ -199,3 +199,10 @@ pre code { background: none; padding: 0; }
 /* Let grid children shrink below their content width on narrow screens. */
 .hero-grid > *, .two-col > *, .grid > * { min-width: 0; }
 .prose table { display: block; overflow-x: auto; }
+
+.hero-note { margin-top: 16px; }
+.list-note { margin-top: 24px; }
+.not-found { text-align: center; }
+.not-found h1 { margin-top: 24px; }
+.not-found .actions { justify-content: center; }
+.not-found .hedgehog-art img { width: 220px; margin: 0 auto; }

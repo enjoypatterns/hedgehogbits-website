@@ -1,6 +1,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
+{%- comment -%}
+  GitHub Pages can't send security headers, so the policy is set here instead.
+  The site loads nothing from other origins and runs no JavaScript. The JSON-LD
+  blocks are data, not scripts, so script-src 'none' doesn't affect them.
+  frame-ancestors can't be set in a meta tag; that needs a real header.
+{%- endcomment %}
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
 <meta name="theme-color" content="#F3F5F6" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0F1416" media="(prefers-color-scheme: dark)">
 {% seo %}

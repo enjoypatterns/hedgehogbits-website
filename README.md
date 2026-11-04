@@ -80,3 +80,15 @@ tags: [privacy]
 | `_layouts/`, `_includes/` | Templates |
 | `assets/css/main.css` | Styles; colours match the app's `Theme.swift` |
 | `assets/images/` | Artwork and icons from the app; `og-image.png` is the social preview |
+
+## Security
+
+- **Content-Security-Policy** (in `_includes/head.html`): the site loads nothing from other origins and
+  runs no JavaScript, so the policy is `default-src 'none'` with only same-origin images and stylesheets.
+  Don't add inline `style="…"` attributes or `<style>` blocks; put styles in `assets/css/main.css`.
+  GitHub Pages can't send real security headers, so `frame-ancestors` and HSTS aren't available.
+- **Referrer policy:** `no-referrer`, so outbound links don't tell other sites where visitors came from.
+- **Workflow:** actions are pinned to commit SHAs, jobs get only the permissions they need, and
+  Dependabot (`.github/dependabot.yml`) proposes updates weekly.
+- **Outside the repo** (see the domain, email and account checklist): verify the domain on GitHub,
+  add SPF/DKIM/DMARC and a CAA record, and use 2FA on the GitHub and registrar accounts.
