@@ -8,6 +8,7 @@ sitemap: false
 > {{ site.description | strip }}
 
 Source: {{ '/' | absolute_url }}
+Contact: {{ site.contact_email }} (feature requests, bug reports and security issues)
 
 ## What it is
 

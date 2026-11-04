@@ -13,13 +13,13 @@ lang: en
 # - Project site:  url: "https://<user>.github.io"  baseurl: "/<repo-name>"
 # - User site or custom domain: url: "https://hedgehogbits.app"  baseurl: ""
 # On GitHub Pages, `url` is filled in automatically if left empty.
-url: "https://enjoypatterns.github.io"
-baseurl: "/hedgehogbits-website"
+url: "https://hedgehogbits.com"
+baseurl: ""
 
 # Leave empty until the app is live; the site then shows "Coming soon to the App Store".
 app_store_url: ""
 # Optional contact address shown in the footer and on the privacy page.
-contact_email: ""
+contact_email: "info@hedgehogbits.com"
 
 author:
   name: Hedgehog Bits

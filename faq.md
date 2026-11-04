@@ -47,4 +47,4 @@ faq:
 {%- endfor %}
 </div>
 
-Still have a question? Read the [security design]({{ '/security/' | relative_url }}) or the [blog]({{ '/blog/' | relative_url }}).
+Still have a question? Read the [security design]({{ '/security/' | relative_url }}) or the [blog]({{ '/blog/' | relative_url }}), or [get in touch]({{ '/feedback/' | relative_url }}).

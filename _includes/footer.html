@@ -13,8 +13,9 @@
         <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
         <li><a href="{{ '/privacy/' | relative_url }}">Privacy policy</a></li>
         <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
+        <li><a href="{{ '/feedback/' | relative_url }}">Feedback</a></li>
         {%- if site.contact_email != "" %}
-        <li><a href="mailto:{{ site.contact_email }}">Contact</a></li>
+        <li><a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></li>
         {%- endif %}
       </ul>
     </nav>

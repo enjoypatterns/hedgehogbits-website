@@ -7,10 +7,9 @@ No cookies, analytics, web fonts or third-party scripts.
 
 Edit `_config.yml`:
 
-- `url` / `baseurl`: set to `https://enjoypatterns.github.io` + `/hedgehogbits-website`. For a custom domain, set `url` to it and `baseurl` to `""`.
-  For a custom domain, also add a `CNAME` file containing the domain.
+- `url` / `baseurl`: `https://hedgehogbits.com` and `""`. The domain is also in `CNAME`; keep the two in step.
 - `app_store_url`: the App Store link once the app is live. Until then the site shows "Coming soon to the App Store".
-- `contact_email`: optional; shown in the footer, privacy page, security page and `security.txt`.
+- `contact_email`: `info@hedgehogbits.com`. Shown in the footer and on the feedback, privacy and security pages and in `security.txt`.
 - `.well-known/security.txt`: renew the `Expires` date yearly.
 
 ## Deploy

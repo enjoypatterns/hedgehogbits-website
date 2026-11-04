@@ -26,6 +26,7 @@ Key facts:
 - [Security design]({{ '/security/' | absolute_url }}): cryptography, iOS hardening, backups and known limitations
 - [FAQ]({{ '/faq/' | absolute_url }}): common questions and answers
 - [Privacy policy]({{ '/privacy/' | absolute_url }}): no data is collected by the app or this website
+- [Feedback]({{ '/feedback/' | absolute_url }}): request features or report bugs by email at {{ site.contact_email }}
 
 ## Comparisons
 
