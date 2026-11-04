@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<article class="wrap prose post" itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="page-header">
+    <p class="eyebrow"><a href="{{ '/blog/' | relative_url }}">Blog</a></p>
+    <h1 itemprop="headline">{{ page.title }}</h1>
+    <p class="post-meta muted">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d %B %Y" }}</time>
+      {%- assign words = content | strip_html | number_of_words -%}
+      &middot; {{ words | divided_by: 200 | plus: 1 }} min read
+    </p>
+    {%- if page.description %}<p class="lead" itemprop="description">{{ page.description }}</p>{% endif %}
+  </header>
+  <div itemprop="articleBody">
+    {{ content }}
+  </div>
+  <footer class="post-footer">
+    {%- if page.tags.size > 0 %}
+    <p class="tags">{% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</p>
+    {%- endif %}
+    <nav class="post-nav" aria-label="More posts">
+      {%- if page.previous %}<a href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
+      {%- if page.next %}<a href="{{ page.next.url | relative_url }}">{{ page.next.title }} &rarr;</a>{% endif %}
+    </nav>
+  </footer>
+</article>

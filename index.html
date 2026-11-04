@@ -1,0 +1,177 @@
+---
+layout: default
+description: >-
+  An encrypted vault for your notes, photos, videos and files that lives only on
+  your iPhone. No servers, no accounts, no sync. It opens like a set of quick brain games.
+---
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Private vault for iPhone</p>
+      <h1>Your files, encrypted on your iPhone and nowhere else.</h1>
+      <p class="lead">
+        Hedgehog Bits keeps notes, photos, videos and documents in an encrypted vault on your device.
+        There are no servers, no accounts and no sync, so your data stays in your hands.
+        To anyone else, it looks like a small collection of brain games.
+      </p>
+      <div class="actions">
+        {% include app-store-button.html %}
+        <a class="button button-secondary" href="{{ '/security/' | relative_url }}">Read the security design</a>
+      </div>
+      <p class="muted small" style="margin-top:16px">For iPhone, {{ site.app.os_requirement }}. Works fully offline.</p>
+    </div>
+    <div aria-hidden="true">
+      <div class="phone">
+        {% include hedgehog.html class="hedgehog-art" %}
+        <div class="phone-title">What's your name?</div>
+        <div class="phone-sub">Say hello, then pick a game.</div>
+        <div class="phone-field">Your name</div>
+        <div class="phone-button">Continue</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="how">
+  <div class="wrap two-col">
+    <div class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2 id="how">One question at the door</h2>
+      <p class="muted">
+        The app opens with a hedgehog and a single question: <em>“What's your name?”</em>
+        Your answer decides what happens next.
+      </p>
+    </div>
+    <ol class="steps">
+      <li><p><strong>Type your vault password</strong> and the vault opens. The key is derived from your password on the device, then used to decrypt your files in memory.</p></li>
+      <li><p><strong>Type anything else</strong> and the app greets you by that name and offers six short games. Nothing hints that a vault exists.</p></li>
+      <li><p><strong>Leave the app</strong> and the vault locks immediately. The app switcher shows only the hedgehog.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="own">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Ownership</p>
+      <h2 id="own">You hold the only key</h2>
+      <p class="muted">
+        We designed Hedgehog Bits so that we never have access to your data. Not because of a policy we promise
+        to follow, but because there is nothing on our side to access.
+      </p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="3"/><path d="M10 18.5h4"/></svg>
+        <h3>Stays on your device</h3>
+        <p class="muted">Everything is stored on your iPhone. The vault is excluded from iCloud and computer backups and from phone-to-phone transfer.</p>
+      </div>
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18"/><path d="M8.5 5.6A9 9 0 0 1 21 12a9 9 0 0 1-1.6 2.4M5.2 7.6A9 9 0 0 0 3 12a9 9 0 0 0 13.5 7.8"/></svg>
+        <h3>No servers, no accounts</h3>
+        <p class="muted">No sign-up, no email address, no sync service and no analytics. The app does not need a network connection to work.</p>
+      </div>
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></svg>
+        <h3>Your password, your key</h3>
+        <p class="muted">The encryption key comes from your password. There is no recovery option and no back door, for you or for anyone else.</p>
+      </div>
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M3 3h18v4H3zM10 12h4"/></svg>
+        <h3>Backups you control</h3>
+        <p class="muted">Export the vault as one encrypted file and keep it wherever you choose: a Mac, a USB drive or a folder of your own.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="inside">
+  <div class="wrap two-col">
+    <div>
+      <p class="eyebrow">Inside the vault</p>
+      <h2 id="inside">Room for what matters</h2>
+      <p class="muted">Organise items in folders, move them with drag and drop, and open them without leaving the app.</p>
+      <p><a href="{{ '/features/' | relative_url }}">See all features &rarr;</a></p>
+    </div>
+    <table class="spec">
+      <tr><th scope="row">Notes</th><td>Write and edit private notes, encrypted on every save.</td></tr>
+      <tr><th scope="row">Photos and videos</th><td>Import from your library or capture straight into the vault with the camera.</td></tr>
+      <tr><th scope="row">Files</th><td>PDFs, text and other documents from the Files app.</td></tr>
+      <tr><th scope="row">Playback</th><td>Video and audio are decrypted in small pieces as they play, never written out in full.</td></tr>
+      <tr><th scope="row">Folders</th><td>Nested folders, moving and drag and drop that never leaves the app.</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="crypto">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Security</p>
+      <h2 id="crypto">Standard, well-studied cryptography</h2>
+      <p class="muted">We use established algorithms with conservative settings and document how they fit together.</p>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>Argon2id</h3><p class="muted">Your password is turned into a key with Argon2id, using 256 MiB of memory and 3 passes, which makes guessing slow and costly.</p></div>
+      <div class="card"><h3>AES-256-GCM</h3><p class="muted">Content is encrypted in authenticated 1 MiB chunks. Tampering, reordering and truncation are detected.</p></div>
+      <div class="card"><h3>Separate keys</h3><p class="muted">Each file, thumbnail and the folder index gets its own derived key, under a random 256-bit master key.</p></div>
+      <div class="card"><h3>No plaintext at rest</h3><p class="muted">Files are decrypted in memory only. Rare temporary copies are deleted on close and on lock.</p></div>
+    </div>
+    <div class="actions"><a class="button button-secondary" href="{{ '/security/' | relative_url }}">Full security design</a></div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="games">
+  <div class="wrap two-col">
+    <div>
+      <p class="eyebrow">The cover</p>
+      <h2 id="games">Six calm brain games</h2>
+      <p class="muted">
+        The games are real and complete, with personal bests like any casual game. They are designed to look ordinary,
+        with a plain, grown-up style that does not invite a closer look.
+      </p>
+      <div class="callout"><p class="small">The cover helps against a passing glance. It is not what protects your data: the encryption does. We explain the difference in <a href="{{ site.baseurl }}{% post_url 2026-11-02-what-a-disguise-can-and-cannot-do %}">this post</a>.</p></div>
+    </div>
+    <table class="spec">
+      <tr><th scope="row">Gaps</th><td>Tap to rise through gaps between walls.</td></tr>
+      <tr><th scope="row">Tap Rush</th><td>Tap targets before they fade. 30 seconds.</td></tr>
+      <tr><th scope="row">Rule Swipe</th><td>Swipe cards that fit a rule that keeps changing.</td></tr>
+      <tr><th scope="row">Pairs</th><td>A 12-card memory game, scored by time.</td></tr>
+      <tr><th scope="row">Stop Line</th><td>Stop the marker in the zone, 15 rounds, each faster.</td></tr>
+      <tr><th scope="row">Six Letters</th><td>Make words from six tiles in 60 seconds.</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="not">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="not">What Hedgehog Bits does not do</h2>
+      <p class="muted">Sometimes the most useful list is the short one.</p>
+    </div>
+    <ul class="not-list">
+      <li>No accounts</li><li>No cloud storage</li><li>No sync</li><li>No analytics or tracking</li>
+      <li>No advertising</li><li>No third-party keyboards</li><li>No password recovery</li><li>No back doors</li>
+    </ul>
+  </div>
+</section>
+
+{%- assign latest = site.posts | slice: 0, 3 -%}
+{%- if latest.size > 0 %}
+<section class="section" aria-labelledby="blog">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">From the blog</p>
+      <h2 id="blog">Notes on privacy and design</h2>
+    </div>
+    <ul class="post-list grid">
+      {%- for post in latest %}
+      <li><a class="card" href="{{ post.url | relative_url }}">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+        <h3>{{ post.title }}</h3>
+        <p class="muted">{{ post.description }}</p>
+      </a></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}

@@ -1,0 +1,4 @@
+<picture class="{{ include.class }}">
+  <source srcset="{{ '/assets/images/hedgehog-dark.png' | relative_url }}" media="(prefers-color-scheme: dark)">
+  <img src="{{ '/assets/images/hedgehog.png' | relative_url }}" alt="{{ include.alt | default: '' }}" width="504" height="369"{% if include.lazy %} loading="lazy"{% endif %}>
+</picture>

@@ -1,0 +1,10 @@
+{%- comment -%}
+  Links to a post by slug, but only once that post is published. Scheduled (future-dated)
+  posts are not part of the build, so `post_url` to them would fail. Until then this
+  renders nothing, including the optional prefix and suffix text.
+  Usage: {% include post-link.html slug="post-slug" text="Link text" prefix="- " suffix="" %}
+{%- endcomment -%}
+{%- assign linked_post = site.posts | where: "slug", include.slug | first -%}
+{%- if linked_post -%}
+{{ include.prefix }}<a href="{{ linked_post.url | relative_url }}">{{ include.text | default: linked_post.title }}</a>{{ include.suffix }}
+{%- endif -%}

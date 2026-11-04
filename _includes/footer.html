@@ -1,0 +1,25 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p class="footer-brand">{{ site.title }}</p>
+      <p class="muted">{{ site.tagline }}. Your data stays on your device.</p>
+    </div>
+    <nav aria-label="Footer">
+      <ul class="footer-links">
+        <li><a href="{{ '/features/' | relative_url }}">Features</a></li>
+        <li><a href="{{ '/security/' | relative_url }}">Security design</a></li>
+        <li><a href="{{ '/compare/' | relative_url }}">Compare</a></li>
+        <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+        <li><a href="{{ '/privacy/' | relative_url }}">Privacy policy</a></li>
+        <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
+        {%- if site.contact_email != "" %}
+        <li><a href="mailto:{{ site.contact_email }}">Contact</a></li>
+        {%- endif %}
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap">
+    <p class="muted small">&copy; {{ site.time | date: "%Y" }} {{ site.title }}. This website uses no cookies, analytics or third-party scripts.</p>
+  </div>
+</footer>

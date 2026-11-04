@@ -1,0 +1,19 @@
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+      <img src="{{ '/assets/images/app-icon.png' | relative_url }}" alt="" width="32" height="32">
+      <span>{{ site.title }}</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        {%- assign nav = "Features:/features/,Security:/security/,Compare:/compare/,FAQ:/faq/,Blog:/blog/" | split: "," -%}
+        {%- for item in nav -%}
+          {%- assign parts = item | split: ":" -%}
+          {%- assign href = parts[1] | relative_url -%}
+          <li><a href="{{ href }}"{% if page.url contains parts[1] %} aria-current="page"{% endif %}>{{ parts[0] }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div>
+</header>

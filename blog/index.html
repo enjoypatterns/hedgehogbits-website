@@ -1,0 +1,27 @@
+---
+layout: default
+title: Blog
+description: >-
+  Articles from Hedgehog Bits on privacy, encryption, data ownership and how the
+  app is designed.
+permalink: /blog/
+---
+<div class="wrap page">
+  <header class="page-header">
+    <p class="eyebrow">Blog</p>
+    <h1>Notes on privacy and design</h1>
+    <p class="lead">How Hedgehog Bits works, why it is built the way it is, and practical advice for keeping your data your own.</p>
+  </header>
+  <ul class="post-list">
+    {%- for post in site.posts %}
+    <li>
+      <a class="card" href="{{ post.url | relative_url }}">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+        <h2>{{ post.title }}</h2>
+        <p class="muted">{{ post.description }}</p>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+  <p class="muted small" style="margin-top:24px">Subscribe with <a href="{{ '/feed.xml' | relative_url }}">RSS</a>.</p>
+</div>

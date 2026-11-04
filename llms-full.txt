@@ -1,0 +1,99 @@
+---
+layout: null
+permalink: /llms-full.txt
+sitemap: false
+---
+# {{ site.title }}: full reference
+
+> {{ site.description | strip }}
+
+Source: {{ '/' | absolute_url }}
+
+## What it is
+
+Hedgehog Bits is a private, offline vault for iPhone ({{ site.app.os_requirement }}). It keeps notes, photos, videos and files encrypted on the device. To anyone else it looks like a small collection of brain games.
+
+The app opens with a line-art hedgehog and the question "What's your name?".
+
+- Typing the vault password and tapping Continue opens the vault.
+- Typing anything else greets the person by that name ("Hi, Sam.") and opens six games.
+- The typed name is held in memory only and never saved.
+- A wrong password takes about as long as a right one, and the app never reports "wrong password".
+
+## Data ownership
+
+- No servers, no accounts, no sync, no analytics, no advertising.
+- Data is stored only on the iPhone and excluded from iCloud backups, computer backups and Quick Start phone-to-phone transfer.
+- The encryption key is derived from the user's password on the device. The developers never receive data or passwords.
+- There is no password recovery and no back door. A forgotten password means the vault cannot be opened.
+- Users move or back up the vault themselves with an encrypted export file.
+
+## Features
+
+- Notes: written and edited inside the vault, encrypted on every save.
+- Photos: import from the photo library; after the batch is encrypted and saved, the app can offer to remove the originals from Photos.
+- Videos and audio: played inside the vault, decrypted piece by piece as they stream.
+- Camera: capture photos and videos directly into the vault, bypassing the photo library.
+- Documents: PDFs, text and other files from the Files app, viewed in the app or via Quick Look.
+- Folders: nested folders, moving items, drag and drop within the app only.
+- Settings: change password (re-wraps the master key only), storage usage, export backup, erase vault.
+
+## Games
+
+- Gaps: tap to rise through gaps between walls (endless).
+- Tap Rush: tap targets before they fade; 30 seconds.
+- Rule Swipe: swipe right if the card fits the rule, left if not; the rule changes every 5 cards; one slip ends the run.
+- Pairs: memory game with 12 cards, scored by time.
+- Stop Line: hold to move a marker and release in the zone; 15 rounds, each faster.
+- Six Letters: make words from 6 letter tiles in 60 seconds, checked against the iPhone's offline dictionary.
+
+## Security design
+
+- Password: any Unicode characters, NFC-normalized; whitespace counts.
+- Key derivation: Argon2id via libsodium, 3 passes, 256 MiB memory, random salt.
+- Master key: random 256 bits, wrapped with AES-256-GCM under the password-derived key.
+- Per-item keys: HKDF-SHA256 from the master key for every file, thumbnail and the encrypted index of names and folders.
+- Content: AES-256-GCM in 1 MiB chunks; each chunk's authentication covers its index and a final-chunk flag, detecting tampering, reordering and truncation.
+- No plaintext at rest: content is decrypted in memory; video and audio decrypt byte ranges on demand; temporary files for sharing or Quick Look are deleted on close and on lock.
+- iOS hardening: FileProtection.complete; excluded from backups; locks as soon as the app leaves the foreground; app switcher shows only the hedgehog; third-party keyboards blocked; autocorrect, predictions and Writing Tools disabled in the name field.
+- Cancellation: unlocks, vault creation, imports and saves are cancelled or discarded if the app locks mid-way; a closed session never writes again.
+- Libraries: Apple CryptoKit and libsodium.
+
+## Backups
+
+- Export: Settings → Export Backup creates one `.hhbits` file containing the vault's existing ciphertext, never decrypted or re-encrypted.
+- Integrity: HMAC-SHA256 keyed from the master key over every entry; any change, truncation, removal, swap or addition is rejected.
+- Restore: on a new iPhone, Restore from Backup on the first screen; password checked first; data staged, verified, flushed, then moved into place; all-or-nothing.
+- Reveals: approximate vault size and item count only.
+- A backup is a snapshot of the vault at export time.
+
+## Known limitations
+
+- The password is visible while typed, because the field is a name field. It clears when the app leaves the foreground.
+- Photos removed from the library remain in Photos' Recently Deleted album for up to 30 days.
+- No password recovery.
+- Without an exported backup, losing or erasing the iPhone loses the vault.
+- The game cover is not a security boundary; anyone who knows the app knows a vault may exist.
+- No app can protect data on a compromised (malware or jailbroken) device.
+
+## Comparisons
+
+{% assign comparisons = site.pages | where: "section", "compare" | sort: "order" -%}
+{% for p in comparisons -%}
+- {{ p.title }}: {{ p.url | absolute_url }}
+  {{ p.description | strip }}
+{% endfor %}
+## Frequently asked questions
+
+{% assign faq_page = site.pages | where: "permalink", "/faq/" | first -%}
+{% for item in faq_page.faq -%}
+Q: {{ item.q }}
+A: {{ item.a }}
+
+{% endfor -%}
+## Blog posts
+
+{% for post in site.posts -%}
+- {{ post.title }} ({{ post.date | date: "%Y-%m-%d" }}): {{ post.url | absolute_url }}
+  {{ post.description | strip }}
+{% endfor %}

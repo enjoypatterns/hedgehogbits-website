@@ -1,0 +1,74 @@
+{%- comment -%}
+  Schema.org data for search engines and AI agents. jekyll-seo-tag already emits
+  WebSite / BlogPosting; this adds the app, the publisher and page-specific types.
+{%- endcomment -%}
+{%- assign site_root = site.url | append: site.baseurl -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ site_root }}/#organization",
+      "name": "{{ site.title }}",
+      "url": "{{ site_root }}/",
+      "logo": "{{ site.logo | absolute_url }}"
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "{{ site_root }}/#app",
+      "name": "{{ site.app.name }}",
+      "description": {{ site.description | strip | jsonify }},
+      "operatingSystem": "{{ site.app.os_requirement }}",
+      "applicationCategory": "UtilitiesApplication",
+      "softwareVersion": "{{ site.app.version }}",
+      "image": "{{ site.logo | absolute_url }}",
+      "publisher": { "@id": "{{ site_root }}/#organization" },
+      {%- if site.app_store_url != "" %}
+      "downloadUrl": "{{ site.app_store_url }}",
+      {%- endif %}
+      "offers": { "@type": "Offer", "price": "{{ site.app.price }}", "priceCurrency": "USD" },
+      "featureList": [
+        "Encrypted vault for notes, photos, videos and files",
+        "Argon2id password key derivation (256 MiB, 3 passes)",
+        "AES-256-GCM encryption in authenticated 1 MiB chunks",
+        "Works fully offline: no servers, no accounts, no sync",
+        "Opens like a set of six brain games",
+        "Encrypted backup file for moving to a new iPhone",
+        "Locks as soon as the app leaves the foreground"
+      ]
+    }
+    {%- unless page.url == "/" or page.url == "/404.html" %},
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site_root }}/" }
+        {%- if page.collection == "posts" -%}
+        ,{ "@type": "ListItem", "position": 2, "name": "Blog", "item": "{{ site_root }}/blog/" }
+        ,{ "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ page.url | absolute_url }}" }
+        {%- elsif page.section == "compare" -%}
+        ,{ "@type": "ListItem", "position": 2, "name": "Compare", "item": "{{ site_root }}/compare/" }
+        ,{ "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ page.url | absolute_url }}" }
+        {%- else -%}
+        ,{ "@type": "ListItem", "position": 2, "name": {{ page.title | jsonify }}, "item": "{{ page.url | absolute_url }}" }
+        {%- endif %}
+      ]
+    }
+    {%- endunless %}
+    {%- if page.faq %},
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {%- for item in page.faq %}
+        {
+          "@type": "Question",
+          "name": {{ item.q | jsonify }},
+          "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | markdownify | strip_html | strip | jsonify }} }
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ]
+    }
+    {%- endif %}
+  ]
+}
+</script>

@@ -1,0 +1,78 @@
+# Hedgehog Bits website
+# Built with Jekyll for GitHub Pages. See README.md for local preview and deployment.
+
+title: Hedgehog Bits
+tagline: A private, offline vault for iPhone
+description: >-
+  Hedgehog Bits is an encrypted, offline vault for iPhone that looks like a
+  collection of quick brain games. Notes, photos, videos and files are encrypted
+  on the device with Argon2id and AES-256-GCM. No servers, no accounts, no sync.
+lang: en
+
+# Set these when you know the final address.
+# - Project site:  url: "https://<user>.github.io"  baseurl: "/<repo-name>"
+# - User site or custom domain: url: "https://hedgehogbits.app"  baseurl: ""
+# On GitHub Pages, `url` is filled in automatically if left empty.
+url: "https://enjoypatterns.github.io"
+baseurl: "/hedgehogbits-website"
+
+# Leave empty until the app is live; the site then shows "Coming soon to the App Store".
+app_store_url: ""
+# Optional contact address shown in the footer and on the privacy page.
+contact_email: ""
+
+author:
+  name: Hedgehog Bits
+logo: /assets/images/app-icon.png
+social:
+  name: Hedgehog Bits
+  links: []
+
+# Used by jekyll-seo-tag for the default social preview.
+image: /assets/images/og-image.png
+
+app:
+  name: Hedgehog Bits
+  platform: iPhone
+  os_requirement: iOS 26 or later
+  category: Utilities
+  price: "0"
+  version: "1.0"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  auto_ids: true
+
+permalink: /blog/:year/:month/:title/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - .jekyll-cache
+
+include:
+  - .well-known

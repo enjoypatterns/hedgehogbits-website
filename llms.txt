@@ -1,0 +1,45 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+# {{ site.title }}
+
+> {{ site.description | strip }}
+
+Hedgehog Bits is an iPhone app ({{ site.app.os_requirement }}). It opens with the question "What's your name?". Typing the vault password opens an encrypted vault; any other answer opens six brain games. All data stays on the device. There is no server, account, sync, analytics, advertising or password recovery.
+
+Key facts:
+
+- Platform: iPhone, {{ site.app.os_requirement }}. Works fully offline.
+- Stores: notes, photos, videos, audio, PDFs, text and other files, in folders.
+- Encryption: Argon2id (256 MiB, 3 passes) password key; random 256-bit master key wrapped with AES-256-GCM; per-item HKDF-SHA256 keys; AES-256-GCM in authenticated 1 MiB chunks.
+- Storage: on the device only; excluded from iCloud backups, computer backups and Quick Start transfer; iOS FileProtection.complete.
+- Backup: manual export to one encrypted `.hhbits` file, protected by an HMAC; all-or-nothing restore on a new iPhone.
+- Forgotten password: the vault cannot be recovered by anyone.
+- Availability: {% if site.app_store_url != "" %}[App Store]({{ site.app_store_url }}){% else %}coming soon to the App Store{% endif %}.
+
+## Pages
+
+- [Home]({{ '/' | absolute_url }}): overview of the app
+- [Features]({{ '/features/' | absolute_url }}): everything the vault and games do
+- [Security design]({{ '/security/' | absolute_url }}): cryptography, iOS hardening, backups and known limitations
+- [FAQ]({{ '/faq/' | absolute_url }}): common questions and answers
+- [Privacy policy]({{ '/privacy/' | absolute_url }}): no data is collected by the app or this website
+
+## Comparisons
+
+{% assign comparisons = site.pages | where: "section", "compare" | sort: "order" -%}
+{% for p in comparisons -%}
+- [{{ p.title }}]({{ p.url | absolute_url }}): {{ p.description | strip }}
+{% endfor %}
+## Blog
+
+{% for post in site.posts -%}
+- [{{ post.title }}]({{ post.url | absolute_url }}): {{ post.description | strip }}
+{% endfor %}
+## Optional
+
+- [Full text for language models]({{ '/llms-full.txt' | absolute_url }})
+- [RSS feed]({{ '/feed.xml' | absolute_url }})
+- [Sitemap]({{ '/sitemap.xml' | absolute_url }})

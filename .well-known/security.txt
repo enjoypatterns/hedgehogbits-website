@@ -1,0 +1,11 @@
+---
+layout: null
+permalink: /.well-known/security.txt
+sitemap: false
+---
+{% if site.contact_email != "" %}Contact: mailto:{{ site.contact_email }}
+{% endif %}Contact: {{ '/security/' | absolute_url }}
+Expires: 2027-11-01T00:00:00.000Z
+Preferred-Languages: en
+Canonical: {{ '/.well-known/security.txt' | absolute_url }}
+Policy: {{ '/security/' | absolute_url }}
