@@ -4,13 +4,13 @@ section: compare
 order: 3
 eyebrow: Compare
 description: >-
-  Some vault apps back up to their own cloud with an account. Hedgehog Bits keeps
-  everything on the iPhone. The trade-offs between convenience and control, set out plainly.
+  Some vault apps back up to their own cloud with an account. Hedgehog Bits keeps everything on the iPhone. The trade-offs between convenience and control.
 lead: >-
   Many popular vault apps offer an account and cloud backup. That is genuinely useful.
   It is also a different model of ownership from an offline vault.
 permalink: /compare/cloud-photo-vaults/
 last_reviewed: 2026-11-04
+last_modified_at: 2026-11-04
 ---
 
 *Last reviewed {{ page.last_reviewed | date: "%-d %B %Y" }}.*
@@ -25,7 +25,7 @@ Both can be well built. The difference is about who holds what, and what you dep
 
 ## Side by side
 
-| | Cloud-backed vault | Hedgehog Bits |
+| Compared | Cloud-backed vault | Hedgehog Bits |
 |---|---|---|
 | Account | Usually needed, at least for backup | None |
 | Where copies live | Your phone and the developer's servers | Your phone, plus any backup file you export |

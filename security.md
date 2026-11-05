@@ -72,7 +72,7 @@ We think it is important to be clear about these.
 - **Recently Deleted.** Photos removed from your library after import stay in the Photos app's *Recently Deleted* album for up to 30 days. Empty that album too.
 - **No recovery.** If you forget the password, the vault cannot be opened, by you or by us.
 - **Lost phone, lost vault.** Without an exported backup, erasing or losing the iPhone means losing the vault.
-- **The cover is not encryption.** The games make the app look ordinary. Someone who knows about Hedgehog Bits knows a vault may be inside. Your protection comes from the encryption and a strong password. [Read more]({{ site.baseurl }}{% post_url 2026-11-02-what-a-disguise-can-and-cannot-do %}).
+- **The cover is not encryption.** The games make the app look ordinary. Someone who knows about Hedgehog Bits knows a vault may be inside. Your protection comes from the encryption and a strong password. See [what a disguise can and cannot do]({{ site.baseurl }}{% post_url 2026-11-02-what-a-disguise-can-and-cannot-do %}).
 - **A compromised device.** No app can protect data on a phone that is already under someone else's control, for example through malware or a jailbreak.
 
 ## Choosing a password

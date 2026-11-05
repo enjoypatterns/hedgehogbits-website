@@ -4,13 +4,13 @@ section: compare
 order: 2
 eyebrow: Compare
 description: >-
-  Calculator vault apps hide files behind a working calculator. How that disguise
-  compares with Hedgehog Bits, what to check about encryption, and where both have limits.
+  Calculator vault apps hide files behind a working calculator. How that compares with Hedgehog Bits, what to check about encryption, and where both have limits.
 lead: >-
   Calculator vaults made the disguised vault popular. The idea is sound, but the
   disguise is now widely known, and the security behind it varies a great deal.
 permalink: /compare/calculator-vault-apps/
 last_reviewed: 2026-11-04
+last_modified_at: 2026-11-04
 ---
 
 *Last reviewed {{ page.last_reviewed | date: "%-d %B %Y" }}.*
@@ -23,7 +23,7 @@ Hedgehog Bits uses the same principle with a different cover: it opens as a set 
 
 ## Side by side
 
-| | Typical calculator vault | Hedgehog Bits |
+| Compared | Typical calculator vault | Hedgehog Bits |
 |---|---|---|
 | Cover | A working calculator | Six working brain games |
 | How well known the cover is | Widely known, and often featured in parenting and safety guides | Less common |

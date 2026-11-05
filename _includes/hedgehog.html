@@ -1,4 +1,6 @@
 <picture class="{{ include.class }}">
+  <source type="image/webp" srcset="{{ '/assets/images/hedgehog-dark.webp' | relative_url }}" media="(prefers-color-scheme: dark)">
   <source srcset="{{ '/assets/images/hedgehog-dark.png' | relative_url }}" media="(prefers-color-scheme: dark)">
-  <img src="{{ '/assets/images/hedgehog.png' | relative_url }}" alt="{{ include.alt | default: '' }}" width="504" height="369"{% if include.lazy %} loading="lazy"{% endif %}>
+  <source type="image/webp" srcset="{{ '/assets/images/hedgehog.webp' | relative_url }}">
+  <img src="{{ '/assets/images/hedgehog.png' | relative_url }}" alt="{{ include.alt | default: '' }}" width="504" height="369"{% if include.lazy %} loading="lazy"{% endif %}{% if include.priority %} fetchpriority="high"{% endif %}>
 </picture>

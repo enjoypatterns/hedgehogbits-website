@@ -18,18 +18,21 @@ baseurl: ""
 
 # Leave empty until the app is live; the site then shows "Coming soon to the App Store".
 app_store_url: ""
+# The numeric App Store ID (from the App Store URL, without "id"). When set, Safari on
+# iPhone shows Apple's Smart App Banner at the top of every page.
+app_store_id: ""
 # Optional contact address shown in the footer and on the privacy page.
 contact_email: "info@hedgehogbits.com"
 
 author:
   name: Hedgehog Bits
+  type: Organization
+  url: "https://hedgehogbits.com/"
 logo: /assets/images/app-icon.png
 social:
   name: Hedgehog Bits
   links: []
 
-# Used by jekyll-seo-tag for the default social preview.
-image: /assets/images/og-image.png
 
 app:
   name: Hedgehog Bits
@@ -65,6 +68,15 @@ defaults:
       path: ""
     values:
       layout: page
+  # Default social preview image for every page and post (jekyll-seo-tag).
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /assets/images/og-image.png
+        width: 1200
+        height: 630
+        alt: "Hedgehog Bits: a private, offline vault for iPhone"
 
 exclude:
   - README.md

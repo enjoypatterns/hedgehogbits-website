@@ -5,13 +5,22 @@
   GitHub Pages can't send security headers, so the policy is set here instead.
   The site loads nothing from other origins and runs no JavaScript. The JSON-LD
   blocks are data, not scripts, so script-src 'none' doesn't affect them.
+  connect-src 'self' only lets audit tools such as Lighthouse fetch robots.txt;
+  with no scripts allowed, nothing on the page can make requests.
   frame-ancestors can't be set in a meta tag; that needs a real header.
 {%- endcomment %}
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; connect-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="no-referrer">
+<meta name="format-detection" content="telephone=no">
+{%- if site.app_store_id and site.app_store_id != "" %}
+<meta name="apple-itunes-app" content="app-id={{ site.app_store_id }}">
+{%- endif %}
 <meta name="theme-color" content="#F3F5F6" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0F1416" media="(prefers-color-scheme: dark)">
 {% seo %}
+{%- if page.robots %}
+<meta name="robots" content="{{ page.robots }}">
+{%- endif %}
 <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">

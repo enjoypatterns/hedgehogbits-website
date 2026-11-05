@@ -3,47 +3,38 @@ layout: null
 permalink: /robots.txt
 sitemap: false
 ---
-# Search engines and AI agents are welcome to read this site.
+# Search engines and AI agents are welcome to read this site, including for search,
+# for answering questions (AI input) and for training. Every page is public.
 User-agent: *
 Allow: /
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 # AI crawlers, listed explicitly so the intent is clear.
 User-agent: GPTBot
 Allow: /
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: OAI-SearchBot
 Allow: /
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: ChatGPT-User
 Allow: /
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: ClaudeBot
 Allow: /
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: Claude-User
 Allow: /
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: Claude-SearchBot
 Allow: /
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: PerplexityBot
 Allow: /
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: Google-Extended
 Allow: /
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: Applebot-Extended
 Allow: /
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 Sitemap: {{ '/sitemap.xml' | absolute_url }}
 # Plain-text summary for language models: {{ '/llms.txt' | absolute_url }}

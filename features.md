@@ -2,8 +2,7 @@
 title: Features
 eyebrow: Features
 description: >-
-  What Hedgehog Bits can do: an encrypted vault for notes, photos, videos and files
-  on iPhone, with folders, a built-in camera, streaming playback and encrypted backups.
+  What Hedgehog Bits can do: an encrypted iPhone vault for notes, photos, videos and files, with folders, a built-in camera, streaming and encrypted backups.
 lead: >-
   A focused set of tools for keeping private things private. Everything below works
   offline, on your iPhone, without an account.

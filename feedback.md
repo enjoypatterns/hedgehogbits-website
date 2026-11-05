@@ -2,8 +2,7 @@
 title: Request a feature or report a bug
 eyebrow: Feedback
 description: >-
-  Suggest a feature or report a problem with Hedgehog Bits by email. What to include,
-  how to keep your vault private while you do, and how to report a security issue.
+  Suggest a feature or report a problem with Hedgehog Bits by email: what to include, how to keep your vault private, and how to report a security issue.
 lead: >-
   Hedgehog Bits has no account, no analytics and no crash reporting, so we can't see how
   it is used. What you tell us is how we learn what works and what is missing.

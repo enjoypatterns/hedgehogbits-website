@@ -1,8 +1,7 @@
 ---
 title: What a disguise can and cannot do
 description: >-
-  Hedgehog Bits looks like a set of brain games. Here is an honest look at what
-  that cover protects against, where it stops, and what actually keeps your data safe.
+  Hedgehog Bits looks like a set of brain games. An honest look at what that cover protects against, where it stops, and what actually keeps your data safe.
 tags: [security, threat model, privacy]
 ---
 

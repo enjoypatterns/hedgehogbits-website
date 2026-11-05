@@ -4,13 +4,13 @@ section: compare
 order: 1
 eyebrow: Compare
 description: >-
-  The iPhone Hidden album keeps photos out of view and behind Face ID. Hedgehog Bits
-  encrypts them with its own password and keeps them off iCloud. Here is the difference.
+  The iPhone Hidden album keeps photos out of view behind Face ID. Hedgehog Bits encrypts them with its own password and keeps them off iCloud. The difference.
 lead: >-
   Apple's Hidden album is built in, free and convenient. It is designed to keep photos
   out of sight, which is different from keeping them encrypted under a key only you hold.
 permalink: /compare/iphone-hidden-album/
 last_reviewed: 2026-11-04
+last_modified_at: 2026-11-04
 ---
 
 *Last reviewed {{ page.last_reviewed | date: "%-d %B %Y" }}.*
@@ -22,7 +22,7 @@ last_reviewed: 2026-11-04
 
 ## Side by side
 
-| | iPhone Hidden album | Hedgehog Bits |
+| Compared | iPhone Hidden album | Hedgehog Bits |
 |---|---|---|
 | What unlocks it | Face ID, Touch ID or the **device passcode** | A **separate vault password** |
 | Encryption | Protected by iOS like the rest of your library | Its own encryption: Argon2id and AES-256-GCM, keyed from the vault password |

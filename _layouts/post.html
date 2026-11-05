@@ -1,18 +1,19 @@
 ---
 layout: default
 ---
-<article class="wrap prose post" itemscope itemtype="https://schema.org/BlogPosting">
+<article class="wrap prose post">
   <header class="page-header">
     <p class="eyebrow"><a href="{{ '/blog/' | relative_url }}">Blog</a></p>
-    <h1 itemprop="headline">{{ page.title }}</h1>
+    <h1>{{ page.title }}</h1>
     <p class="post-meta muted">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d %B %Y" }}</time>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+      {%- if page.last_modified_at %} &middot; updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%-d %B %Y" }}</time>{% endif %}
       {%- assign words = content | strip_html | number_of_words -%}
       &middot; {{ words | divided_by: 200 | plus: 1 }} min read
     </p>
-    {%- if page.description %}<p class="lead" itemprop="description">{{ page.description }}</p>{% endif %}
+    {%- if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
   </header>
-  <div itemprop="articleBody">
+  <div>
     {{ content }}
   </div>
   <footer class="post-footer">
