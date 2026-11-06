@@ -5,7 +5,7 @@ description: >-
   Hedgehog Bits collects no personal data. The app has no servers, accounts,
   analytics or advertising. This website uses no cookies or tracking.
 permalink: /privacy/
-last_updated: 2026-11-04
+last_updated: 2026-11-06
 ---
 
 *Last updated {{ page.last_updated | date: "%-d %B %Y" }}.*
@@ -28,9 +28,21 @@ The app asks for these only when you use the related feature:
 
 | Permission | Why |
 |---|---|
-| Camera | To take photos and videos that go straight into the vault without being saved to your photo library. |
+| Camera | To take photos and videos, and to scan documents, straight into the vault without saving them to your photo library. |
 | Microphone | To record sound when you capture a video into the vault. |
 | Photo library | To import items and, if you choose, remove the originals after they are safely in the vault. |
+
+### Purchases
+
+Hedgehog Bits Plus is sold through the App Store, and Apple handles the payment. We never receive your name, email address or payment details. The app checks your purchases on your iPhone with Apple's StoreKit. This is the only time the app connects to the internet, and it connects to Apple, not to us. See [Apple's privacy policy](https://www.apple.com/legal/privacy/).
+
+### Deleting your data
+
+Everything is on your iPhone, so you are in control of it. You can erase the vault from the app's settings, and deleting the app removes all of its data. We hold no copy, so there is nothing for us to delete or hand over.
+
+### Your rights
+
+Under UK and EU data protection law (UK GDPR and GDPR) you have rights over personal data held about you. Hedgehog Bits does not collect or hold any personal data, so there is no data of yours that we can access, correct, export or delete.
 
 ## This website
 
