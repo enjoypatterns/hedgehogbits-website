@@ -33,7 +33,7 @@
         "Argon2id password key derivation (256 MiB, 3 passes)",
         "AES-256-GCM encryption in authenticated 1 MiB chunks",
         "Works fully offline: no servers, no accounts, no sync",
-        "Opens like a set of six brain games",
+        "Opens like a set of ten brain games",
         "Encrypted backup file for moving to a new iPhone",
         "Locks as soon as the app leaves the foreground"
       ]
@@ -55,6 +55,23 @@
       ]
     }
     {%- endunless %}
+    {%- if page.video %},
+    {%- assign d = '/assets/demo/' | absolute_url %}
+    {
+      "@type": "VideoObject",
+      "@id": "{{ page.url | absolute_url }}#video",
+      "name": {{ page.video.name | jsonify }},
+      "description": {{ page.description | strip | jsonify }},
+      "thumbnailUrl": ["{{ d }}{{ page.video.thumbnail }}"],
+      "uploadDate": "{{ page.video.upload_date }}",
+      "duration": "{{ page.video.duration }}",
+      "contentUrl": "{{ d }}{{ page.video.file }}",
+      "inLanguage": "{{ site.lang }}",
+      "isFamilyFriendly": true,
+      "publisher": { "@id": "{{ site_root }}/#organization" },
+      "about": { "@id": "{{ site_root }}/#app" }
+    }
+    {%- endif %}
     {%- if page.faq %},
     {
       "@type": "FAQPage",

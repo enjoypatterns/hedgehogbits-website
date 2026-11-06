@@ -83,6 +83,19 @@ tags: [privacy]
 | `assets/css/main.css` | Styles; colours match the app's `Theme.swift` |
 | `assets/images/` | Artwork and icons from the app; `og-image.png` is the social preview |
 
+
+## Demo video
+
+`/demo/` and the home page hero show a walkthrough of the app, recorded in the iOS Simulator with made-up sample content.
+
+- **Files:** `assets/demo/`. `demo-light.mp4` and `demo-dark.mp4` are about 0.9 MB each. The `NN-name-light|dark.webp` stills are the step-by-step screenshots.
+- **Shared markup:** `_includes/demo-video.html`.
+  - The hero version plays automatically, muted and looping. With Reduce Motion on, it downloads nothing and shows a still instead.
+  - The `/demo/` version has controls and only loads when played.
+  - Both follow light and dark mode.
+- **Page text:** the `/demo/` front matter holds the video details (used for the VideoObject structured data and `og:video`), the chapter times and the step captions. `llms-full.txt` reuses the captions.
+- **Re-recording:** from the app repo, run `Scripts/record_demo.sh ../hedgehog-bits-website`. It builds the app, loads the sample vault, runs the scripted walkthrough (`HedgehogBitsDemo/WebsiteDemo.swift`) in light and dark, and copies the encoded videos here. If the screens change, also update the stills and check the chapter times.
+
 ## Security
 
 - **Content-Security-Policy** (in `_includes/head.html`): the site loads nothing from other origins and

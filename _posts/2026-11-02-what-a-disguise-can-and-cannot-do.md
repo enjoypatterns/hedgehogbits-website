@@ -14,7 +14,7 @@ Most privacy problems are not sophisticated attacks. They are a friend scrolling
 For these situations, the cover helps:
 
 - **The home screen looks ordinary.** A calm app with a hedgehog doesn't invite questions.
-- **Opening the app shows games.** Anyone who types a name sees a greeting and six playable games with personal bests.
+- **Opening the app shows games.** Anyone who types a name sees a greeting and ten playable games with personal bests.
 - **Nothing gives the vault away.** The app never says "wrong password", and a wrong answer takes about as long as a right one.
 - **The app switcher shows only the hedgehog,** and the vault locks the moment you leave the app.
 

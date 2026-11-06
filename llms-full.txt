@@ -14,12 +14,20 @@ Contact: {{ site.contact_email }} (feature requests, bug reports and security is
 
 Hedgehog Bits is a private, offline vault for iPhone ({{ site.app.os_requirement }}). It keeps notes, photos, videos and files encrypted on the device. To anyone else it looks like a small collection of brain games.
 
-The app opens with a line-art hedgehog and the question "What's your name?".
+The app opens with a line-art hedgehog and the question "Who is playing?".
 
 - Typing the vault password and tapping Continue opens the vault.
-- Typing anything else greets the person by that name ("Hi, Sam.") and opens six games.
+- Typing anything else greets the person by that name ("Hi, Sam.") and opens ten games.
 - The typed name is held in memory only and never saved.
 - A wrong password takes about as long as a right one, and the app never reports "wrong password".
+
+## Demo
+
+A 50-second silent video of the app and a step-by-step walkthrough with screenshots: {{ '/demo/' | absolute_url }}
+{%- assign demo = site.pages | where: "url", "/demo/" | first %}
+{% for step in demo.steps %}
+{{ forloop.index }}. {{ step.title }}: {{ step.text }}
+{%- endfor %}
 
 ## Data ownership
 
@@ -47,6 +55,10 @@ The app opens with a line-art hedgehog and the question "What's your name?".
 - Pairs: memory game with 12 cards, scored by time.
 - Stop Line: hold to move a marker and release in the zone; 15 rounds, each faster.
 - Six Letters: make words from 6 letter tiles in 60 seconds, checked against the iPhone's offline dictionary.
+- Quick Sums: pick the right answer from three for 60 seconds; sums get harder; a wrong pick costs 3 seconds.
+- Echo: repeat a growing sequence on four pads, each with its own shape.
+- In Order: tap 1 to 25 on a shuffled grid; fastest time wins; a wrong tap adds 1 second.
+- Reflex: tap the moment the panel changes; average of 5 rounds in milliseconds.
 
 ## Security design
 

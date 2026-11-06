@@ -23,7 +23,7 @@ We think that last point deserves to be said plainly. A recovery option means so
 
 ## Why it looks like a game
 
-When you open Hedgehog Bits, you see a line-art hedgehog and a simple question: *"What's your name?"* Type your vault password and the vault opens. Type anything else and the app greets you and offers six short brain games.
+When you open Hedgehog Bits, you see a line-art hedgehog and a simple question: *"Who is playing?"* Type your vault password and the vault opens. Type anything else and the app greets you and offers ten short brain games.
 
 The goal is discretion. An app called "Secret Vault" on a home screen invites questions. A calm game with a hedgehog does not. We wrote more about what this cover can and cannot do in [a separate post]({{ site.baseurl }}{% post_url 2026-11-02-what-a-disguise-can-and-cannot-do %}).
 

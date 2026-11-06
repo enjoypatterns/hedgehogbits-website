@@ -11,10 +11,10 @@ permalink: /features/
 
 ## Opening the vault
 
-Hedgehog Bits opens with a line-art hedgehog and one question: **"What's your name?"**
+Hedgehog Bits opens with a line-art hedgehog and one question: **"Who is playing?"**
 
 - Type your vault password and the vault opens.
-- Type anything else and the app says hello by that name ("Hi, Sam.") and offers six games.
+- Type anything else and the app says hello by that name ("Hi, Sam.") and offers ten games.
 - The name you type is kept in memory only and never saved, because it might be a mistyped password.
 - A wrong answer takes about as long as a right one, and the app never says "wrong password".
 
@@ -47,7 +47,7 @@ Read more in [Moving your vault to a new iPhone]({{ site.baseurl }}{% post_url 2
 
 ## The games
 
-The cover is a set of six complete games with personal bests, styled to look calm and ordinary.
+The cover is a set of ten complete games with personal bests, styled to look calm and ordinary.
 
 | Game | How it plays |
 |---|---|
@@ -57,6 +57,10 @@ The cover is a set of six complete games with personal bests, styled to look cal
 | Pairs | A memory game with 12 cards, scored by time. |
 | Stop Line | Hold to move the marker and let go in the zone. 15 rounds, each faster. |
 | Six Letters | Make words from six letter tiles in 60 seconds, checked against the iPhone's offline dictionary. |
+| Quick Sums | Pick the right answer from three for 60 seconds. Sums get harder, and a wrong pick costs 3 seconds. |
+| Echo | Repeat a growing sequence on four pads. Each pad has its own shape, not just a colour. |
+| In Order | Tap 1 to 25 on a shuffled grid. Fastest time wins, and a wrong tap adds a second. |
+| Reflex | Tap the moment the panel changes. The average of five rounds, in milliseconds. |
 
 ## Requirements
 

@@ -7,7 +7,7 @@ sitemap: false
 
 > {{ site.description | strip }}
 
-Hedgehog Bits is an iPhone app ({{ site.app.os_requirement }}). It opens with the question "What's your name?". Typing the vault password opens an encrypted vault; any other answer opens six brain games. All data stays on the device. There is no server, account, sync, analytics, advertising or password recovery.
+Hedgehog Bits is an iPhone app ({{ site.app.os_requirement }}). It opens with the question "Who is playing?". Typing the vault password opens an encrypted vault; any other answer opens ten brain games. All data stays on the device. There is no server, account, sync, analytics, advertising or password recovery.
 
 Key facts:
 
@@ -23,6 +23,7 @@ Key facts:
 
 - [Home]({{ '/' | absolute_url }}): overview of the app
 - [Features]({{ '/features/' | absolute_url }}): everything the vault and games do
+- [Demo]({{ '/demo/' | absolute_url }}): a 50-second video and a step-by-step walkthrough with screenshots
 - [Security design]({{ '/security/' | absolute_url }}): cryptography, iOS hardening, backups and known limitations
 - [FAQ]({{ '/faq/' | absolute_url }}): common questions and answers
 - [Privacy policy]({{ '/privacy/' | absolute_url }}): no data is collected by the app or this website

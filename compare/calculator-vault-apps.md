@@ -25,7 +25,7 @@ Hedgehog Bits uses the same principle with a different cover: it opens as a set 
 
 | Compared | Typical calculator vault | Hedgehog Bits |
 |---|---|---|
-| Cover | A working calculator | Six working brain games |
+| Cover | A working calculator | Ten working brain games |
 | How well known the cover is | Widely known, and often featured in parenting and safety guides | Less common |
 | Unlock | Usually a short numeric PIN | A password of any length and characters |
 | Encryption | Varies by app. Some encrypt files; others only put a PIN screen in front of them | Always: Argon2id and AES-256-GCM, documented publicly |

@@ -9,7 +9,7 @@
   with no scripts allowed, nothing on the page can make requests.
   frame-ancestors can't be set in a meta tag; that needs a real header.
 {%- endcomment %}
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; connect-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; media-src 'self'; connect-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="no-referrer">
 <meta name="format-detection" content="telephone=no">
 {%- if site.app_store_id and site.app_store_id != "" %}
@@ -18,6 +18,12 @@
 <meta name="theme-color" content="#F3F5F6" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0F1416" media="(prefers-color-scheme: dark)">
 {% seo %}
+{%- if page.video %}
+<meta property="og:video" content="{{ '/assets/demo/' | append: page.video.file | absolute_url }}">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="590">
+<meta property="og:video:height" content="1282">
+{%- endif %}
 {%- if page.robots %}
 <meta name="robots" content="{{ page.robots }}">
 {%- endif %}

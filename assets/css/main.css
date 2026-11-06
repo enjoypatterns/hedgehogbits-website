@@ -221,3 +221,44 @@ pre code { background: none; padding: 0; }
   .post-nav a { display: inline-block; padding: 10px 0; }
   .lead { font-size: 1.1rem; }
 }
+
+/* App demo video inside the phone frame */
+.hero-demo { margin: 0; text-align: center; }
+.hero-demo figcaption { margin-top: 22px; }
+.phone-video { aspect-ratio: auto; padding: 8px; border-radius: 46px; display: block; }
+.demo-video, .demo-still img { display: block; width: 100%; height: auto; border-radius: 38px; background: var(--bg); }
+.demo-still { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .demo-autoplay { display: none; }
+  .demo-still { display: block; }
+}
+@media (max-width: 560px) {
+  .phone-video { width: min(260px, 100%); aspect-ratio: auto; padding: 7px; border-radius: 40px; }
+  .demo-video, .demo-still img { border-radius: 33px; }
+}
+
+/* Demo page */
+.demo-player { max-width: 320px; margin: 0 0 12px; }
+.prose .demo-steps { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 28px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); max-width: none; counter-reset: demo; }
+.demo-steps li { counter-increment: demo; margin: 0; min-width: 0; }
+.demo-steps figure { margin: 0; }
+.demo-steps img { width: 100%; height: auto; border-radius: 22px; border: 1px solid var(--border); background: var(--surface); }
+.demo-steps figcaption { margin-top: 12px; font-size: .95rem; }
+.demo-steps figcaption strong { display: block; color: var(--text); margin-bottom: 2px; }
+.demo-steps figcaption strong::before { content: counter(demo) ". "; color: var(--primary); }
+.demo-steps figcaption span { color: var(--muted); }
+.demo-intro { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: 48px; align-items: start; }
+.demo-intro .demo-player { margin: 0; width: 100%; }
+.demo-intro h2 { margin-top: 0; }
+.prose .chapters { list-style: none; padding: 0; margin: 0 0 20px; }
+.chapters li { display: flex; gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--border); margin: 0; }
+.chapter-time { font-family: var(--mono); font-size: .9rem; color: var(--primary); min-width: 3.2em; padding-top: 2px; }
+@media (max-width: 720px) {
+  .demo-intro { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .demo-intro .demo-player { width: min(280px, 100%); margin: 0 auto; }
+}
+.only-dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  .only-dark { display: block; }
+  .only-light { display: none; }
+}

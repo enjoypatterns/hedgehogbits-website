@@ -1,0 +1,27 @@
+{%- comment -%}
+  The app walkthrough, recorded from the iOS Simulator (see README, "Demo video").
+  Light and dark versions follow the visitor's appearance setting.
+  autoplay=true: the muted, looping hero. With "Reduce Motion" turned on no source matches,
+  so nothing downloads or plays, and a still is shown instead. No poster: it can't follow
+  dark mode, and the frame's background matches until the first frame arrives.
+  Otherwise: a normal player with controls that the visitor starts.
+{%- endcomment -%}
+{%- assign d = '/assets/demo/' | relative_url -%}
+{%- if include.autoplay -%}
+<video class="demo-video demo-autoplay" autoplay muted loop playsinline preload="auto" width="590" height="1282"{% if include.label %} aria-label="{{ include.label }}"{% endif %}>
+  <source src="{{ d }}demo-light.mp4" type="video/mp4" media="(prefers-color-scheme: light) and (prefers-reduced-motion: no-preference)">
+  <source src="{{ d }}demo-dark.mp4" type="video/mp4" media="(prefers-reduced-motion: no-preference)">
+</video>
+<picture class="demo-still">
+  <source srcset="{{ d }}09-locked-dark.webp" media="(prefers-color-scheme: dark)">
+  <img src="{{ d }}09-locked-light.webp" width="600" height="1304" loading="lazy" alt="{{ include.still_alt | default: '' }}">
+</picture>
+{%- else -%}
+{%- comment -%} One player per appearance, so the cover image matches; only the visible one is shown, and neither downloads until played. {%- endcomment -%}
+{%- assign modes = "light,dark" | split: "," -%}
+{%- for mode in modes %}
+<video class="demo-video only-{{ mode }}" controls muted playsinline preload="none" width="590" height="1282" poster="{{ d }}09-locked-{{ mode }}.webp"{% if include.label %} aria-label="{{ include.label }}"{% endif %}>
+  <source src="{{ d }}demo-{{ mode }}.mp4" type="video/mp4">
+</video>
+{%- endfor %}
+{%- endif -%}

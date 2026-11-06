@@ -1,0 +1,102 @@
+---
+title: "Hedgehog Bits demo: how the iPhone vault works"
+eyebrow: Demo
+description: >-
+  A 50-second walkthrough of Hedgehog Bits on iPhone: a name opens the games, the
+  password opens the encrypted vault, and Lock returns to the hedgehog.
+lead: >-
+  Fifty seconds of the real app. Someone types a name and gets the games. The owner types
+  their password in the same field and gets the vault.
+permalink: /demo/
+last_modified_at: 2026-11-06
+video:
+  name: "Hedgehog Bits: a walkthrough of the private iPhone vault"
+  file: demo-light.mp4
+  thumbnail: 09-locked-light.webp
+  upload_date: "2026-11-06T09:00:00+00:00"
+  duration: PT50S
+  chapters:
+    - { time: "0:00", name: "Someone types a name, and the app opens the games" }
+    - { time: "0:09", name: "A real game: In Order" }
+    - { time: "0:20", name: "The owner types the password in the same field" }
+    - { time: "0:26", name: "The vault: folders, photos and notes" }
+    - { time: "0:33", name: "Viewing photos" }
+    - { time: "0:42", name: "Documents" }
+    - { time: "0:47", name: "Lock: back to the hedgehog" }
+steps:
+  - image: 01-gate-name
+    title: "Who is playing?"
+    text: "Anyone who opens the app sees the hedgehog and this one question. Here, someone types a name."
+  - image: 02-games
+    title: "A name opens the games"
+    text: "Any answer that isn't the password opens ten games with personal bests. Nothing on screen mentions a vault."
+  - image: 03-game
+    title: "The games are real"
+    text: "Each game is complete. This one is In Order: tap 1 to 25 on a shuffled grid as fast as you can."
+  - image: 04-gate-password
+    title: "The password goes in the same field"
+    text: "The owner types their vault password where a name would go. It is checked on the iPhone. There is no server and no account."
+  - image: 05-vault
+    title: "The vault opens"
+    text: "Folders, notes, photos, videos and files, all encrypted on the device."
+  - image: 06-folder
+    title: "Folders you organise yourself"
+    text: "Items in the vault are encrypted copies. They are not part of your photo library, iCloud or computer backups."
+  - image: 07-photo
+    title: "Viewing a photo"
+    text: "Photos and videos are decrypted in memory while you look at them, and swipe like a normal gallery."
+  - image: 08-documents
+    title: "Documents"
+    text: "Scans and PDFs, such as a passport or a rental agreement. Everything in this demo is made-up sample content."
+  - image: 09-locked
+    title: "Lock, and it's a game again"
+    text: "Tap Lock, or leave the app, and it returns to the hedgehog straight away. The app switcher only ever shows the hedgehog."
+layout: default
+---
+<article class="wrap prose page">
+  <header class="page-header">
+    <p class="eyebrow">{{ page.eyebrow }}</p>
+    <h1>See how Hedgehog Bits works</h1>
+    <p class="lead">{{ page.lead }}</p>
+  </header>
+
+  <div class="wide demo-intro">
+    <div class="demo-player phone phone-video">
+      {% include demo-video.html label=page.video.name %}
+    </div>
+    <div>
+      <h2 id="in-the-video">In the video</h2>
+      <ol class="chapters">
+        {%- for chapter in page.video.chapters %}
+        <li><span class="chapter-time">{{ chapter.time }}</span> {{ chapter.name }}</li>
+        {%- endfor %}
+      </ol>
+      <p class="muted small">No sound. Recorded in the iOS Simulator with made-up sample content. The video follows your device's light or dark setting.</p>
+    </div>
+  </div>
+
+  <h2 id="steps">Step by step</h2>
+  <p>The same walkthrough as still screenshots, for reading at your own pace.</p>
+  <ol class="demo-steps">
+    {%- assign d = '/assets/demo/' | relative_url -%}
+    {%- for step in page.steps %}
+    <li>
+      <figure>
+        <picture>
+          <source srcset="{{ d }}{{ step.image }}-dark.webp" media="(prefers-color-scheme: dark)">
+          <img src="{{ d }}{{ step.image }}-light.webp" width="600" height="1304" loading="lazy" alt="{{ step.title | escape }}: {{ step.text | escape }}">
+        </picture>
+        <figcaption><strong>{{ step.title }}</strong> <span>{{ step.text }}</span></figcaption>
+      </figure>
+    </li>
+    {%- endfor %}
+  </ol>
+
+  <h2 id="what-the-demo-does-not-show">What the demo doesn't show</h2>
+  <ul>
+    <li><strong>The encryption itself.</strong> Your password is turned into a key with Argon2id, and each item is encrypted with AES-256-GCM. The <a href="{{ '/security/' | relative_url }}">security design</a> page explains how.</li>
+    <li><strong>Backups.</strong> You can export the vault as one encrypted file and restore it on a new iPhone. See <a href="{{ site.baseurl }}{% post_url 2026-10-28-moving-your-vault-to-a-new-iphone %}">moving your vault to a new iPhone</a>.</li>
+    <li><strong>The limits of a disguise.</strong> The games help against a passing glance. They are not what protects your data. <a href="{{ site.baseurl }}{% post_url 2026-11-02-what-a-disguise-can-and-cannot-do %}">What a disguise can and cannot do</a> covers this.</li>
+  </ul>
+  <p>More detail is on the <a href="{{ '/features/' | relative_url }}">features</a> page and in the <a href="{{ '/faq/' | relative_url }}">FAQ</a>.</p>
+</article>

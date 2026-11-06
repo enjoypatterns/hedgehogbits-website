@@ -23,7 +23,7 @@ These steps help a lot, but they share one weakness: anyone who knows your devic
 
 A vault with its own password protects files even from someone who can unlock the phone. Hedgehog Bits adds a few things for shared phones:
 
-- **It looks like a game.** If someone opens it, they see six playable games. Children can play them without finding anything.
+- **It looks like a game.** If someone opens it, they see ten playable games. Children can play them without finding anything.
 - **It locks as soon as you leave it.** Switch apps or lock the screen and the vault closes. The app switcher shows only the hedgehog.
 - **It doesn't announce itself.** A wrong answer just greets the person by name. The app never says "wrong password".
 

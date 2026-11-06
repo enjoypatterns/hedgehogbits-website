@@ -17,17 +17,14 @@ description: >-
         {% include app-store-button.html %}
         <a class="button button-secondary" href="{{ '/security/' | relative_url }}">Read the security design</a>
       </div>
-      <p class="muted small hero-note">For iPhone, {{ site.app.os_requirement }}. Works fully offline.</p>
+      <p class="muted small hero-note">For iPhone, {{ site.app.os_requirement }}. Works fully offline. <a href="{{ '/demo/' | relative_url }}">See how it works, step by step</a>.</p>
     </div>
-    <div aria-hidden="true">
-      <div class="phone">
-        {% include hedgehog.html class="hedgehog-art" priority=true %}
-        <div class="phone-title">What's your name?</div>
-        <div class="phone-sub">Say hello, then pick a game.</div>
-        <div class="phone-field">Your name</div>
-        <div class="phone-button">Continue</div>
+    <figure class="hero-demo">
+      <div class="phone phone-video">
+        {% include demo-video.html autoplay=true label="Hedgehog Bits in use: a name opens the games, the password opens the vault" still_alt="The Hedgehog Bits start screen asking Who is playing?" %}
       </div>
-    </div>
+      <figcaption class="muted small">The real app, with sample content. <a href="{{ '/demo/' | relative_url }}">Watch the walkthrough</a></figcaption>
+    </figure>
   </div>
 </section>
 
@@ -37,13 +34,13 @@ description: >-
       <p class="eyebrow">How it works</p>
       <h2 id="how">One question at the door</h2>
       <p class="muted">
-        The app opens with a hedgehog and a single question: <em>“What's your name?”</em>
+        The app opens with a hedgehog and a single question: <em>“Who is playing?”</em>
         Your answer decides what happens next.
       </p>
     </div>
     <ol class="steps">
       <li><p><strong>Type your vault password</strong> and the vault opens. The key is derived from your password on the device, then used to decrypt your files in memory.</p></li>
-      <li><p><strong>Type anything else</strong> and the app greets you by that name and offers six short games. Nothing hints that a vault exists.</p></li>
+      <li><p><strong>Type anything else</strong> and the app greets you by that name and offers ten short games. Nothing hints that a vault exists.</p></li>
       <li><p><strong>Leave the app</strong> and the vault locks immediately. The app switcher shows only the hedgehog.</p></li>
     </ol>
   </div>
@@ -123,7 +120,7 @@ description: >-
   <div class="wrap two-col">
     <div>
       <p class="eyebrow">The cover</p>
-      <h2 id="games">Six calm brain games</h2>
+      <h2 id="games">Ten calm brain games</h2>
       <p class="muted">
         The games are real and complete, with personal bests like any casual game. They are designed to look ordinary,
         with a plain, grown-up style that does not invite a closer look.
@@ -137,6 +134,10 @@ description: >-
       <tr><th scope="row">Pairs</th><td>A 12-card memory game, scored by time.</td></tr>
       <tr><th scope="row">Stop Line</th><td>Stop the marker in the zone, 15 rounds, each faster.</td></tr>
       <tr><th scope="row">Six Letters</th><td>Make words from six tiles in 60 seconds.</td></tr>
+      <tr><th scope="row">Quick Sums</th><td>Pick the right answer from three. 60 seconds.</td></tr>
+      <tr><th scope="row">Echo</th><td>Repeat a growing sequence on four pads.</td></tr>
+      <tr><th scope="row">In Order</th><td>Tap 1 to 25 on a shuffled grid, as fast as you can.</td></tr>
+      <tr><th scope="row">Reflex</th><td>Tap the moment the panel changes. Five rounds.</td></tr>
     </table>
   </div>
 </section>

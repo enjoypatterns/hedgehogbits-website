@@ -7,9 +7,9 @@ description: >-
 permalink: /faq/
 faq:
   - q: "What is Hedgehog Bits?"
-    a: "An iPhone app that keeps notes, photos, videos and files in an encrypted vault on your device. It opens like a set of six brain games, and the vault opens only when you type your password where the app asks for your name."
+    a: "An iPhone app that keeps notes, photos, videos and files in an encrypted vault on your device. It opens like a set of ten brain games, and the vault opens only when you type your password where the app asks for your name."
   - q: "How do I open the vault?"
-    a: "When the app asks \"What's your name?\", type your vault password and tap Continue. Any other answer opens the games."
+    a: "When the app asks \"Who is playing?\", type your vault password and tap Continue. Any other answer opens the games."
   - q: "Where is my data stored?"
     a: "Only on your iPhone, encrypted. It is not sent to any server, not included in iCloud or computer backups, and not copied during Quick Start phone-to-phone transfer."
   - q: "Do I need an account?"
@@ -25,7 +25,7 @@ faq:
   - q: "What encryption does it use?"
     a: "Argon2id (256 MiB, 3 passes) turns your password into a key that unwraps a random 256-bit master key. Each item has its own HKDF-derived key, and content is encrypted with AES-256-GCM in authenticated 1 MiB chunks. Details are on the Security design page."
   - q: "Are the games real?"
-    a: "Yes. All six are complete games with personal bests: Gaps, Tap Rush, Rule Swipe, Pairs, Stop Line and Six Letters."
+    a: "Yes. All ten are complete games with personal bests: Gaps, Tap Rush, Rule Swipe, Pairs, Stop Line, Six Letters, Quick Sums, Echo, In Order and Reflex."
   - q: "Does the disguise make my data secure?"
     a: "The disguise helps the app look ordinary at a glance. Your data is protected by encryption and the strength of your password, not by the disguise."
   - q: "Does the app collect analytics or show ads?"

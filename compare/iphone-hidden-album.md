@@ -53,7 +53,7 @@ For a lot of people, that is enough. It stops a photo from appearing while you s
 - The vault password is separate from your device passcode. Knowing how to unlock the phone does not open the vault.
 - Files are encrypted by the app itself and never leave the iPhone unless you export a backup.
 - It holds documents and notes, not only photos.
-- It doesn't look like a vault. To someone else, it opens as six small games.
+- It doesn't look like a vault. To someone else, it opens as ten small games.
 
 ## The trade-offs
 
