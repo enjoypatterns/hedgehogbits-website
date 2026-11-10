@@ -1,5 +1,1 @@
-{%- if site.app_store_url != "" -%}
-<a class="button" href="{{ site.app_store_url }}" rel="noopener">Download on the App Store</a>
-{%- else -%}
-<span class="button button-disabled" aria-disabled="true">Coming soon to the App Store</span>
-{%- endif -%}
+<a class="store-badge" href="{{ site.app_store_url }}" rel="noopener"><img src="{{ '/assets/images/app-store-badge.svg' | relative_url }}" alt="Download on the App Store" width="162" height="48"></a>

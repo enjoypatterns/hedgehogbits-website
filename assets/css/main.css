@@ -81,8 +81,17 @@ p { margin: 0 0 1em; }
 }
 .button:hover { opacity: .9; }
 .button-secondary { background: var(--surface); color: var(--text); border-color: var(--border); }
-.button-disabled { background: var(--surface-alt); color: var(--muted); border-color: var(--border); cursor: default; }
-.button-disabled:hover { opacity: 1; }
+/* Apple's official badge, shown unmodified and at least 40px tall as Apple requires. */
+.store-badge { display: inline-flex; align-self: flex-start; border-radius: 8px; }
+.store-badge img { display: block; height: 48px; width: auto; }
+.store-badge:hover { opacity: .9; }
+
+/* App card (end of posts and the demo page) */
+.app-card { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin: 40px 0 0; padding: 20px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.app-card > img { border-radius: 16px; border: 1px solid var(--border); flex: none; }
+.app-card > div { flex: 1 1 220px; }
+.app-card p { margin: 0; }
+.app-card-title { font-weight: 600; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 
 /* Hero */

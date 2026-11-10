@@ -16,11 +16,11 @@ lang: en
 url: "https://hedgehogbits.com"
 baseurl: ""
 
-# Leave empty until the app is live; the site then shows "Coming soon to the App Store".
-app_store_url: ""
-# The numeric App Store ID (from the App Store URL, without "id"). When set, Safari on
-# iPhone shows Apple's Smart App Banner at the top of every page.
-app_store_id: ""
+# The App Store listing. Used by every "Download on the App Store" button.
+app_store_url: "https://apps.apple.com/gb/app/hedgehogbits-secret-vault/id6832221911"
+# The numeric App Store ID (from the App Store URL, without "id"). Safari on iPhone
+# uses it to show Apple's Smart App Banner at the top of every page.
+app_store_id: "6832221911"
 # Optional contact address shown in the footer and on the privacy page.
 contact_email: "info@hedgehogbits.com"
 

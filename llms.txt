@@ -17,7 +17,7 @@ Key facts:
 - Storage: on the device only; excluded from iCloud backups, computer backups and Quick Start transfer; iOS FileProtection.complete.
 - Backup: manual export to one encrypted `.hhbits` file, protected by an HMAC; all-or-nothing restore on a new iPhone.
 - Forgotten password: the vault cannot be recovered by anyone.
-- Availability: {% if site.app_store_url != "" %}[App Store]({{ site.app_store_url }}){% else %}coming soon to the App Store{% endif %}.
+- Availability: [App Store]({{ site.app_store_url }}), free with an optional Plus upgrade.
 
 ## Pages
 

@@ -8,8 +8,8 @@ No cookies, analytics, web fonts or third-party scripts.
 Edit `_config.yml`:
 
 - `url` / `baseurl`: `https://hedgehogbits.com` and `""`. The domain is also in `CNAME`; keep the two in step.
-- `app_store_url`: the App Store link once the app is live. Until then the site shows "Coming soon to the App Store".
-- `app_store_id`: the numeric App Store ID. When set, Safari on iPhone shows Apple's Smart App Banner.
+- `app_store_url`: the App Store listing, used by every "Download on the App Store" button.
+- `app_store_id`: the numeric App Store ID (`6832221911`). Safari on iPhone uses it to show Apple's Smart App Banner.
 - A post or page can set its own social preview with `image: { path: ..., width: ..., height: ..., alt: ... }` in front matter. Otherwise it uses `og-image.png`. Add `last_modified_at:` when you update a page or post substantially.
 - `contact_email`: `info@hedgehogbits.com`. Shown in the footer and on the feedback, privacy and security pages and in `security.txt`.
 - `.well-known/security.txt`: renew the `Expires` date yearly.

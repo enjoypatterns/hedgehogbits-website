@@ -16,6 +16,7 @@ layout: default
   <div>
     {{ content }}
   </div>
+  {% include app-card.html %}
   <footer class="post-footer">
     {%- if page.tags.size > 0 %}
     <p class="tags">{% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</p>

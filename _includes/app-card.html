@@ -1,0 +1,8 @@
+<aside class="app-card" aria-label="Get {{ site.app.name }}">
+  <img src="{{ '/assets/images/app-icon.png' | relative_url }}" alt="{{ site.app.name }} app icon" width="72" height="72" loading="lazy">
+  <div>
+    <p class="app-card-title">{{ site.app.name }}</p>
+    <p class="muted small">{{ site.tagline }}. Free on the App Store, for {{ site.app.os_requirement }}.</p>
+  </div>
+  {% include app-store-button.html %}
+</aside>
