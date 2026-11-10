@@ -166,6 +166,9 @@ p { margin: 0 0 1em; }
 .prose li { margin-bottom: .35em; }
 .prose table { border-collapse: collapse; width: 100%; font-size: .95rem; margin: 1.5em 0; }
 .prose th, .prose td { border-bottom: 1px solid var(--border); padding: 10px 12px 10px 0; text-align: left; vertical-align: top; }
+.prose figure { margin: 1.8em 0; }
+.prose figure img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); }
+.prose figcaption { margin-top: 10px; font-size: .95rem; color: var(--muted); }
 .prose blockquote { margin: 1.5em 0; padding: 4px 20px; border-left: 3px solid var(--border); color: var(--muted); }
 code { font-family: var(--mono); font-size: .88em; background: var(--surface-alt); padding: 2px 6px; border-radius: 6px; }
 pre { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; overflow-x: auto; }
