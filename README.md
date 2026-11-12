@@ -1,7 +1,7 @@
 # Hedgehog Bits website
 
 Promotional site and blog for Hedgehog Bits, built with Jekyll for GitHub Pages.
-No cookies, analytics, web fonts or third-party scripts.
+No cookies, analytics, web fonts or third-party scripts. Only the free tools under `/tools/` run JavaScript, all of it served from this site.
 
 ## Before publishing
 
@@ -79,6 +79,7 @@ tags: [privacy]
 | `index.html` | Home page |
 | `features.md`, `security.md`, `faq.md`, `privacy.md` | Main pages |
 | `blog/index.html`, `_posts/` | Blog |
+| `tools/`, `assets/js/` | Free tools: photo metadata remover, password checker |
 | `_layouts/`, `_includes/` | Templates |
 | `assets/css/main.css` | Styles; colours match the app's `Theme.swift` |
 | `assets/images/` | Artwork and icons from the app; `og-image.png` is the social preview |
@@ -99,9 +100,15 @@ tags: [privacy]
 ## Security
 
 - **Content-Security-Policy** (in `_includes/head.html`): the site loads nothing from other origins and
-  runs no JavaScript, so the policy is `default-src 'none'` with only same-origin images and stylesheets.
+  by default runs no JavaScript, so the policy is `default-src 'none'` with only same-origin images and stylesheets.
   Don't add inline `style="…"` attributes or `<style>` blocks; put styles in `assets/css/main.css`.
   GitHub Pages can't send real security headers, so `frame-ancestors` and HSTS aren't available.
+- **Pages with JavaScript** (only the free tools in `tools/`) opt in through front matter:
+  `scripts:` lists same-origin script files, and the CSP then allows exactly those files and
+  enforces Trusted Types, so build the page with `textContent` and DOM methods, never `innerHTML`.
+  `csp_connect:` adds origins the page may `fetch` from (the password checker uses
+  `https://api.pwnedpasswords.com`), and `csp_img:` adds image sources (`blob:` for local previews).
+  `assets/js/vendor/zxcvbn.js` is zxcvbn 4.4.2 from npm, unmodified (MIT, licence alongside).
 - **Referrer policy:** `no-referrer`, so outbound links don't tell other sites where visitors came from.
 - **Workflow:** actions are pinned to commit SHAs, jobs get only the permissions they need, and
   Dependabot (`.github/dependabot.yml`) proposes updates weekly.

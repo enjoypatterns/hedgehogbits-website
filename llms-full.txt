@@ -96,6 +96,15 @@ A 50-second silent video of the app and a step-by-step walkthrough with screensh
 - {{ p.title }}: {{ p.url | absolute_url }}
   {{ p.description | strip }}
 {% endfor %}
+## Free tools
+
+Browser-based tools on the website. They run on the visitor's device; photos are never uploaded, and the password checker sends only a 5-character SHA-1 hash prefix to Have I Been Pwned when asked.
+
+{% assign tools = site.pages | where: "section", "tools" | sort: "order" -%}
+{% for p in tools -%}
+- {{ p.title }}: {{ p.url | absolute_url }}
+  {{ p.description | strip }}
+{% endfor %}
 ## Frequently asked questions
 
 {% assign faq_page = site.pages | where: "permalink", "/faq/" | first -%}

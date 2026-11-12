@@ -3,13 +3,22 @@
 <meta name="color-scheme" content="light dark">
 {%- comment -%}
   GitHub Pages can't send security headers, so the policy is set here instead.
-  The site loads nothing from other origins and runs no JavaScript. The JSON-LD
-  blocks are data, not scripts, so script-src 'none' doesn't affect them.
-  connect-src 'self' only lets audit tools such as Lighthouse fetch robots.txt;
-  with no scripts allowed, nothing on the page can make requests.
+  The site loads nothing from other origins and, by default, runs no JavaScript.
+  The JSON-LD blocks are data, not scripts, so default-src 'none' doesn't affect them.
+  connect-src 'self' only lets audit tools such as Lighthouse fetch robots.txt.
   frame-ancestors can't be set in a meta tag; that needs a real header.
+
+  Pages that need JavaScript (the free tools) opt in through front matter:
+    scripts:      same-origin script files. Only these exact files may run, and
+                  Trusted Types blocks string-to-HTML sinks such as innerHTML.
+    csp_connect:  extra origins the page may fetch from.
+    csp_img:      extra image sources, e.g. blob: for previews of local files.
 {%- endcomment %}
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; media-src 'self'; connect-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+{%- capture csp -%}
+default-src 'none'; img-src 'self'{% if page.csp_img %} {{ page.csp_img }}{% endif %}; media-src 'self'; connect-src 'self'{% if page.csp_connect %} {{ page.csp_connect }}{% endif %};
+{%- if page.scripts %} script-src{% for s in page.scripts %} {{ s | absolute_url }}{% endfor %}; require-trusted-types-for 'script'; trusted-types 'none';{% endif %} style-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests
+{%- endcapture %}
+<meta http-equiv="Content-Security-Policy" content="{{ csp | strip_newlines }}">
 <meta name="referrer" content="no-referrer">
 <meta name="format-detection" content="telephone=no">
 {%- if site.app_store_id and site.app_store_id != "" %}
@@ -30,6 +39,9 @@
 <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+{%- for s in page.scripts %}
+<script src="{{ s | relative_url }}" defer></script>
+{%- endfor %}
 {% feed_meta %}
 <link rel="alternate" type="text/plain" title="Summary for language models" href="{{ '/llms.txt' | relative_url }}">
 {% include structured-data.html %}

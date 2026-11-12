@@ -49,6 +49,9 @@
         {%- elsif page.section == "compare" -%}
         ,{ "@type": "ListItem", "position": 2, "name": "Compare", "item": "{{ site_root }}/compare/" }
         ,{ "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ page.url | absolute_url }}" }
+        {%- elsif page.section == "tools" -%}
+        ,{ "@type": "ListItem", "position": 2, "name": "Tools", "item": "{{ site_root }}/tools/" }
+        ,{ "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ page.url | absolute_url }}" }
         {%- else -%}
         ,{ "@type": "ListItem", "position": 2, "name": {{ page.title | jsonify }}, "item": "{{ page.url | absolute_url }}" }
         {%- endif %}
@@ -70,6 +73,22 @@
       "isFamilyFriendly": true,
       "publisher": { "@id": "{{ site_root }}/#organization" },
       "about": { "@id": "{{ site_root }}/#app" }
+    }
+    {%- endif %}
+    {%- if page.tool %},
+    {
+      "@type": "WebApplication",
+      "@id": "{{ page.url | absolute_url }}#tool",
+      "name": {{ page.tool.name | jsonify }},
+      "url": "{{ page.url | absolute_url }}",
+      "description": {{ page.description | strip | jsonify }},
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": {{ page.tool.features | jsonify }},
+      "publisher": { "@id": "{{ site_root }}/#organization" }
     }
     {%- endif %}
     {%- if page.faq %},
