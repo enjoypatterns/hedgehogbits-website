@@ -1,7 +1,7 @@
 ---
 title: Password strength and breach checker
 section: tools
-order: 2
+order: 3
 eyebrow: Free tool
 description: >-
   See how long a password or passcode would take to crack, and check whether it

@@ -86,6 +86,7 @@ To share a single photo without its location, select it in Photos, tap **Share**
 
 {% include post-link.html slug="where-hidden-photos-on-iphone-actually-go" text="Where hidden photos on iPhone actually go" prefix="- " %}
 {% include post-link.html slug="private-files-on-a-shared-phone" text="Keeping private files private on a shared phone" prefix="- " %}
+- [Blur faces and number plates in a photo]({{ '/tools/photo-blur/' | relative_url }})
 - [Password strength and breach checker]({{ '/tools/password-checker/' | relative_url }})
 
 {% include app-card.html %}

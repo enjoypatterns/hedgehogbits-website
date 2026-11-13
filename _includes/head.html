@@ -13,10 +13,13 @@
                   Trusted Types blocks string-to-HTML sinks such as innerHTML.
     csp_connect:  extra origins the page may fetch from.
     csp_img:      extra image sources, e.g. blob: for previews of local files.
+    csp_script:   extra script-src sources that aren't loaded by a <script> tag here,
+                  e.g. a WebAssembly loader a library injects, or 'wasm-unsafe-eval'.
+    trusted_types: Trusted Types policy names the page may create (default: none).
 {%- endcomment %}
 {%- capture csp -%}
 default-src 'none'; img-src 'self'{% if page.csp_img %} {{ page.csp_img }}{% endif %}; media-src 'self'; connect-src 'self'{% if page.csp_connect %} {{ page.csp_connect }}{% endif %};
-{%- if page.scripts %} script-src{% for s in page.scripts %} {{ s | absolute_url }}{% endfor %}; require-trusted-types-for 'script'; trusted-types 'none';{% endif %} style-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests
+{%- if page.scripts %} script-src{% for s in page.scripts %} {{ s | absolute_url }}{% endfor %}{% for s in page.csp_script %} {% if s contains "'" %}{{ s }}{% else %}{{ s | absolute_url }}{% endif %}{% endfor %}; require-trusted-types-for 'script'; trusted-types {{ page.trusted_types | default: "'none'" }};{% endif %} style-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests
 {%- endcapture %}
 <meta http-equiv="Content-Security-Policy" content="{{ csp | strip_newlines }}">
 <meta name="referrer" content="no-referrer">

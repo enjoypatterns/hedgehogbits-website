@@ -79,7 +79,7 @@ tags: [privacy]
 | `index.html` | Home page |
 | `features.md`, `security.md`, `faq.md`, `privacy.md` | Main pages |
 | `blog/index.html`, `_posts/` | Blog |
-| `tools/`, `assets/js/` | Free tools: photo metadata remover, password checker |
+| `tools/`, `assets/js/` | Free tools: photo metadata remover, photo blurrer, password checker |
 | `_layouts/`, `_includes/` | Templates |
 | `assets/css/main.css` | Styles; colours match the app's `Theme.swift` |
 | `assets/images/` | Artwork and icons from the app; `og-image.png` is the social preview |
@@ -108,7 +108,16 @@ tags: [privacy]
   enforces Trusted Types, so build the page with `textContent` and DOM methods, never `innerHTML`.
   `csp_connect:` adds origins the page may `fetch` from (the password checker uses
   `https://api.pwnedpasswords.com`), and `csp_img:` adds image sources (`blob:` for local previews).
-  `assets/js/vendor/zxcvbn.js` is zxcvbn 4.4.2 from npm, unmodified (MIT, licence alongside).
+  `csp_script:` adds script sources that no `<script>` tag loads (the photo blurrer's WebAssembly
+  loader, which MediaPipe injects itself, and `'wasm-unsafe-eval'`), and `trusted_types:` names the
+  Trusted Types policies a page may create. The blurrer creates a `default` policy that allows only
+  that one loader URL.
+- **Vendored libraries**, unmodified:
+  - `assets/js/vendor/zxcvbn.js`: zxcvbn 4.4.2 from npm (MIT, licence alongside).
+  - `assets/js/vendor/mediapipe/`: `@mediapipe/tasks-vision` 1.1.1 from npm (`vision_bundle.js`,
+    `wasm/vision_wasm_internal.js` and `.wasm`), and the BlazeFace full-range face detection model
+    from Google's `mediapipe-models` bucket (Apache 2.0, licence alongside). The WASM file is about
+    13.5 MB and is fetched only when someone opens a photo in the blurrer.
 - **Referrer policy:** `no-referrer`, so outbound links don't tell other sites where visitors came from.
 - **Workflow:** actions are pinned to commit SHAs, jobs get only the permissions they need, and
   Dependabot (`.github/dependabot.yml`) proposes updates weekly.
