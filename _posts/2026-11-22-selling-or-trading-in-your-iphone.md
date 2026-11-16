@@ -15,7 +15,7 @@ The vault isn't carried across by Quick Start or iCloud Backup, so move it yours
 1. On the old phone, open the vault and choose **Settings → Export Backup…**
 2. Save the `.hhbits` file to Files, AirDrop it to a Mac, or copy it to a USB drive.
 3. On the new phone, install Hedgehog Bits and tap **Restore from Backup…**
-4. Choose the file and enter your vault password.
+4. Choose the file and enter your vault password: the one that was in use when you exported it.
 5. Open the vault on the new phone and check that your files are there.
 
 Only continue once the new phone has everything.
@@ -31,12 +31,6 @@ If you are trading in at an Apple Store, Apple's guide asks you to let the speci
 ## Step 3: Look after the backup file
 
 After restoring, you may still have the `.hhbits` file on a Mac or USB drive. It is encrypted and opens only with your vault password. You can keep it as a backup or delete it. If you keep it, remember it is a snapshot from the day you exported it.
-
-## Common mistakes
-
-- **Erasing before checking the restore.** Confirm the new phone opens the vault first.
-- **Relying on iCloud Backup.** It doesn't include the vault, by design.
-- **Forgetting the password.** The backup needs the vault password that was in use when you exported it.
 
 ## Related
 

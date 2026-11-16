@@ -43,7 +43,7 @@ This makes incognito mode genuinely useful when:
 
 As the Firefox screen above says, some browsers also turn on extra protection in private mode. Firefox blocks many *trackers*: hidden pieces of other companies' code that follow you from site to site. Safari on iPhone blocks known trackers too, and strips some of the tracking information that gets added to links.
 
-This helps, but it has limits. It doesn't stop the website you are actually on from seeing what you do there, and it can't help once you sign in.
+This helps against other companies following you around. It doesn't change what the website you're on can see, as the next section explains.
 
 ## What incognito mode doesn't do
 
@@ -62,6 +62,8 @@ Your visits still travel through your home internet provider, your mobile networ
 ### Websites can still see roughly where you are
 
 The websites you visit can usually tell which town or area you are connecting from. Private mode on its own doesn't change that.
+
+{% include post-link.html slug="what-a-vpn-does-and-does-not-do" prefix="A VPN can hide which sites you visit from your provider, and your location from websites, but it has limits of its own. See " text="what a VPN does and doesn't do" suffix="." %}
 
 ### It doesn't protect you from viruses or scams
 
@@ -91,6 +93,7 @@ Since iOS 17, Safari locks your private tabs when you leave them, so they need F
 
 ## Related
 
+{% include post-link.html slug="what-a-vpn-does-and-does-not-do" text="VPNs: what they do and what they don't" prefix="- " %}
 {% include post-link.html slug="private-files-on-a-shared-phone" text="Keeping private files private on a shared phone" prefix="- " %}
 {% include post-link.html slug="where-hidden-photos-on-iphone-actually-go" text="Where hidden photos on iPhone actually go" prefix="- " %}
 - [What a disguise can and cannot do]({{ site.baseurl }}{% post_url 2026-11-02-what-a-disguise-can-and-cannot-do %})

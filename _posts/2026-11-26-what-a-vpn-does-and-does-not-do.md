@@ -1,9 +1,8 @@
 ---
 title: "VPNs: what they do and what they don't"
 description: >-
-  A VPN hides which websites you visit from the Wi-Fi or internet provider you're
-  using, and hides your real location from the websites. It doesn't make you
-  anonymous. A plain-language guide to what it protects, and from whom.
+  A VPN hides the websites you visit from your Wi-Fi or internet provider, and
+  your location from websites. It doesn't make you anonymous. Here's what it does.
 tags: [privacy, how-to, iphone]
 image:
   path: /assets/blog/vpn-on-public-wifi-cafe-social.jpg
@@ -22,13 +21,11 @@ Here is how it works, in plain words.
 
 ## The short version
 
-A VPN changes **who can see where you go online**. It doesn't change **what the websites themselves can see**.
-
-Normally, everything you do online passes through whoever provides your connection: your home internet provider, your mobile network, or the café's Wi-Fi. With a VPN switched on, your connection goes in a locked tunnel to the VPN company's computer first, and then out to the internet from there.
+A VPN changes **who can see where you go online**. It doesn't change **what the websites themselves can see**, and it hands the view your internet provider had to the VPN company.
 
 ## How it works
 
-Think of sending a letter.
+Everything you do online passes through whoever provides your connection: your home internet provider, your mobile network, or the café's Wi-Fi. Think of it as sending letters.
 
 **Without a VPN**, every envelope you post shows who it's for. As long as the website uses a secure connection (almost all do now), the postal service can't read the letter inside. But it can see the address on every envelope, so it knows which websites you visit and when.
 
@@ -36,19 +33,14 @@ Think of sending a letter.
 
 <figure>
 {% include diagrams/vpn.html %}
-  <figcaption>With a VPN, your Wi-Fi or internet provider only sees a locked connection to the VPN company. The VPN company now sees which sites you visit, and websites still see everything you do on them.</figcaption>
+  <figcaption>Who can see what, with and without a VPN.</figcaption>
 </figure>
-
-That has two effects:
-
-1. **Your Wi-Fi or internet provider can no longer see which websites you visit.** It can see that you're using a VPN, roughly how much you're sending and receiving, and when, but not where it's going.
-2. **The websites see the VPN company's address instead of yours.** Every connection to the internet has an address (an *IP address*), and it usually reveals roughly which town or area you're in and which provider you use. With a VPN, websites see the VPN's address and its location instead.
 
 ## What a VPN does
 
-- **Hides which websites you visit from the network you're on.** That includes your home internet provider, your mobile network, and whoever runs the Wi-Fi in a hotel, café, airport or office.
-- **Adds protection on public Wi-Fi.** Most websites and apps already encrypt what you send, so the risk is smaller than it used to be. A VPN still stops the Wi-Fi owner, or someone snooping on it, from seeing which websites you visit, and it protects the occasional app or website that doesn't use a secure connection.
-- **Hides your real location and address from websites.** A website sees the location of the VPN's computer, which can be in another city or another country.
+- **Hides which websites you visit from the network you're on:** your home internet provider, your mobile network, or whoever runs the Wi-Fi in a hotel, café, airport or office. They can still see that you're using a VPN, roughly how much you send and receive, and when.
+- **Hides your address and location from websites.** Every connection to the internet has an address (an *IP address*), which usually reveals roughly which town you're in and which provider you use. Websites see the VPN's address instead, which can be in another city or another country.
+- **Protects the odd unsecured connection on public Wi-Fi.** Most websites and apps already encrypt what you send, so the risk is smaller than it used to be. A VPN covers the occasional app or website that doesn't.
 - **Can get you past some network blocks.** If a school, workplace or hotel network blocks certain websites, a VPN often gets around it. Check the rules first: going around a block at work or school can break their policies.
 
 ## What a VPN doesn't do
@@ -63,13 +55,13 @@ A VPN hides your connection on the way to a website. Once you arrive, the websit
 
 ### Your location can still be shared
 
-If you've let an app or website use your location, your phone tells it where you are using GPS and other signals, and a VPN doesn't stop that. The same goes for anything you share yourself, like a delivery address or a photo with its location saved inside it.
+If you've let an app or website use your location, your phone tells it where you are using GPS and other signals, and a VPN doesn't stop that. The same goes for anything you share yourself, like a delivery address or a photo with its location saved inside it. Our free [photo metadata remover]({{ '/tools/photo-metadata-remover/' | relative_url }}) shows what a photo gives away and removes it.
 
 ### The VPN company can see what your provider used to see
 
 This is the most important thing to understand. A VPN doesn't remove the problem of someone seeing which websites you visit; it moves it. Instead of your internet provider, **the VPN company** is now in a position to see it.
 
-So the VPN company needs to be one you trust. Many promise that they keep no records (a *no-logs* policy), and some have paid independent firms to check this. Be most careful with **free VPNs**: running a VPN costs money, and some free ones have been found showing ads, collecting what you do and selling it, or carrying malware.
+So the VPN company needs to be one you trust. Many promise that they keep no records (a *no-logs* policy), and some have paid independent firms to check this. It's the same kind of checking that's worth doing [before you trust any privacy app]({{ site.baseurl }}{% post_url 2026-11-11-what-to-check-before-trusting-a-vault-app %}). Be most careful with **free VPNs**: running a VPN costs money, and some free ones have been found showing ads, collecting what you do and selling it, or carrying malware.
 
 ### It doesn't protect you from scams or viruses
 
@@ -77,7 +69,7 @@ A fake website, a harmful download or a scam message works exactly the same with
 
 ### It doesn't protect what's stored on your phone
 
-A VPN protects your connection while information travels. It does nothing for the photos, files and messages kept on your phone. If someone picks up your unlocked phone, or it's lost or stolen, a VPN doesn't help. Your passcode, and encryption for anything private you store, do that job.
+A VPN protects your connection while information travels. It does nothing for the photos, files and messages kept on your phone. If someone picks up your unlocked phone, or it's lost or stolen, a VPN doesn't help. A strong [passcode]({{ '/tools/password-checker/' | relative_url }}), and encryption for anything private you store, do that job. If other people use your phone, see [keeping private files private on a shared phone]({{ site.baseurl }}{% post_url 2026-11-16-private-files-on-a-shared-phone %}).
 
 ### It isn't the same as incognito mode
 
@@ -87,16 +79,12 @@ A VPN doesn't stop your phone from keeping your browsing history. A private wind
 
 - **Streaming services** often notice VPNs and block them, and watching another country's catalogue can break their terms.
 - **Banks and shopping sites** sometimes ask for extra checks, or block you, when you appear to be in a different place than usual.
-- **Some countries** restrict or ban VPNs. If you're travelling, check the rules where you're going.
+- **Some countries** restrict or ban VPNs. If you're travelling, check the rules where you're going. Our guide to [travelling with private files]({{ site.baseurl }}{% post_url 2026-11-24-travelling-with-private-files %}) covers the rest of your phone.
 - **If the VPN connection drops**, your phone may carry on without it, unless the app has a setting that stops this (often called a *kill switch*).
 
 ## Do you need one?
 
-A VPN is worth it if you often use **public Wi-Fi**, if you don't want your **internet provider** to see which websites you visit, or if you want websites to see a **different location** from your own.
-
-It isn't worth it if what you want is to stop **Google, Facebook or other websites** from knowing what you do. For that, sign in less, use private windows, and turn off tracking in your apps and browser.
-
-If you do get one, choose a well-known paid provider that has had its no-logs promise checked independently, rather than whichever free app tops the App Store chart.
+If something under *What a VPN does* matters to you, a VPN is worth having. If what you want is to stop **Google, Facebook or other websites** from knowing what you do, it's the wrong tool. Sign in less, use private windows, and turn off tracking in your apps and browser instead.
 
 ## A VPN on iPhone
 
@@ -115,5 +103,6 @@ A VPN from your employer or school does a different job: it connects your device
 ## Related
 
 - [Incognito mode: what it does and what it doesn't]({{ site.baseurl }}{% post_url 2026-11-10-what-incognito-mode-does-and-does-not-do %})
-{% include post-link.html slug="travelling-with-private-files" text="Travelling with private files on your iPhone" prefix="- " %}
+- [Travelling with private files on your iPhone]({{ site.baseurl }}{% post_url 2026-11-24-travelling-with-private-files %})
 - [What to check before trusting a vault app]({{ site.baseurl }}{% post_url 2026-11-11-what-to-check-before-trusting-a-vault-app %})
+- [See and remove the location in your photos]({{ '/tools/photo-metadata-remover/' | relative_url }})

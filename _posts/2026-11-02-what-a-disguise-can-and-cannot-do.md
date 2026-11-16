@@ -5,7 +5,7 @@ description: >-
 tags: [security, threat model, privacy]
 ---
 
-Hedgehog Bits opens like a casual game. That is a useful feature, but it is easy to overstate. This post describes where the cover helps and where it doesn't, so you can rely on the right things.
+Hedgehog Bits opens like a casual game. That is a useful feature, but it is easy to overstate. The cover decides whether anyone *notices* the vault. The encryption decides whether anyone can *open* it. Rely on the second, and treat the first as a convenience.
 
 ## What the cover is good for
 
@@ -22,7 +22,7 @@ We also kept the look deliberately grown-up and plain: flat surfaces, system typ
 
 ## Where the cover stops
 
-A disguise is only a disguise. It is worth being clear about its limits:
+The cover doesn't help in these cases:
 
 - **Someone who knows the app knows what it is.** This website exists, and so does the App Store listing. If a person knows Hedgehog Bits, they know a vault may be inside.
 - **Your password is visible as you type it.** The start screen asks for a name, and a name field that hid its letters would look unusual. Be aware of who can see your screen. The field clears as soon as the app leaves the foreground.
@@ -38,9 +38,5 @@ The protection comes from encryption and from your password:
 - There are **no servers and no recovery mechanism**, so there is no second way in.
 
 This means the most important decision is your password. A few random words, such as *"copper lantern orbit meadow"*, is far stronger than a short word with a number, and still easy to remember. The app shows a strength estimate when you choose it.
-
-## A simple way to think about it
-
-The cover decides whether anyone *notices* the vault. The encryption decides whether anyone can *open* it. You should rely on the second and treat the first as a convenience.
 
 For the full design and its limitations, see the [security design]({{ '/security/' | relative_url }}).

@@ -40,5 +40,3 @@ The backup is the vault's own ciphertext, packed into a single file. It is never
 - **It reveals size, not content.** Someone with the file can see roughly how big the vault is and how many items it holds, but nothing inside it.
 - **Where you keep it is your choice.** A USB drive in a drawer, an encrypted disk, or a cloud folder you already trust. Each has trade-offs, and you are best placed to judge them.
 - **Make one before you need it.** If your phone is lost or erased and you have no backup, the vault is gone too.
-
-A regular backup is the simplest way to own your data without depending on anyone else's infrastructure.

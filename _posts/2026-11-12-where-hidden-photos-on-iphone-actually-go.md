@@ -39,9 +39,7 @@ Photos in a shared album or an iCloud Shared Photo Library are visible to the pe
 
 ## What this means in practice
 
-The Hidden album is a good way to keep photos out of sight while you scroll in front of others. It is not designed to keep photos away from someone who knows your passcode, or off your other devices.
-
-If you need that, you have two broad options:
+The Hidden album is a good way to keep photos out of sight while you scroll in front of others. If you also need them safe from someone who knows your passcode, or off your other devices, you have two broad options:
 
 1. **Turn on Advanced Data Protection** to make iCloud Photos end-to-end encrypted, and keep the photos in your library.
 2. **Move the photos into an encrypted vault** that stays off iCloud, such as Hedgehog Bits, then delete the originals and empty *Recently Deleted*.

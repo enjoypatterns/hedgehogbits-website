@@ -25,7 +25,7 @@ If the phone comes back erased or replaced, install Hedgehog Bits and choose **R
 
 If you would rather the vault wasn't on the device while it is out of your hands:
 
-1. Export a backup and confirm the file is saved.
+1. Check that the backup from step 2 is saved.
 2. Use **Settings → Erase Vault** in the app.
 3. Restore from the backup when the phone is back.
 
@@ -35,7 +35,7 @@ This is the most reliable option. Nothing is there to be found.
 
 Technicians sometimes ask for your device passcode to test the phone. Your passcode opens your Photos library, messages, email and most apps.
 
-It does **not** open Hedgehog Bits. The vault uses its own password and its own encryption, so the device passcode is not enough to read it. That said, the safest approach is the one in step 3.
+It does **not** open Hedgehog Bits. The vault uses its own password and its own encryption, so the device passcode is not enough to read it.
 
 ## 5. Follow Apple's Find My guidance
 
