@@ -5,11 +5,20 @@ description: >-
   using, and hides your real location from the websites. It doesn't make you
   anonymous. A plain-language guide to what it protects, and from whom.
 tags: [privacy, how-to, iphone]
+image:
+  path: /assets/blog/vpn-on-public-wifi-cafe-social.jpg
+  width: 1200
+  height: 630
+  alt: "Illustration of a person in a café using a VPN on their phone, their connection protected by a locked tunnel out to the internet"
 ---
 
 VPN apps are advertised everywhere, often with big promises: total privacy, complete anonymity, protection from hackers. A VPN is a useful tool, but it does one specific job. Knowing what that job is makes it much easier to decide whether you need one.
 
 Here is how it works, in plain words.
+
+<figure>
+  <img src="{{ '/assets/blog/vpn-on-public-wifi-cafe.webp' | relative_url }}" width="1376" height="768" alt="Illustration of a person in a café using a VPN on their phone. A teal ribbon with a padlock carries their connection out of the window to the city, past the barista and other customers.">
+</figure>
 
 ## The short version
 
