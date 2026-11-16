@@ -25,6 +25,11 @@ Think of sending a letter.
 
 **With a VPN**, you put all your envelopes inside one big envelope addressed to the VPN company. The postal service only sees letters going to the VPN company. The VPN company opens the big envelope and posts each letter on for you. When the replies come back, it bundles them up and sends them back to you the same way.
 
+<figure>
+{% include diagrams/vpn.html %}
+  <figcaption>With a VPN, your Wi-Fi or internet provider only sees a locked connection to the VPN company. The VPN company now sees which sites you visit, and websites still see everything you do on them.</figcaption>
+</figure>
+
 That has two effects:
 
 1. **Your Wi-Fi or internet provider can no longer see which websites you visit.** It can see that you're using a VPN, roughly how much you're sending and receiving, and when, but not where it's going.

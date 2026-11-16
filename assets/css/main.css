@@ -399,3 +399,23 @@ button.button:disabled { opacity: .6; cursor: progress; }
 .pb-modes { border: 0; padding: 0; margin: 16px 0 0; display: flex; gap: 20px; flex-wrap: wrap; }
 .pb-modes label { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; }
 .pb-modes input { accent-color: var(--primary); width: 18px; height: 18px; }
+
+/* VPN post diagram (_includes/diagrams/vpn.html) */
+.vpn-diagram { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.vpn-diagram svg { display: block; width: 100%; height: auto; }
+@media (max-width: 600px) { .vpn-diagram { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; } }
+.vd-panel text { font-family: var(--font); font-size: 13.5px; fill: var(--text); }
+.vd-panel .vd-title { font-size: 17px; font-weight: 700; }
+.vd-panel .vd-name { font-size: 15px; font-weight: 600; }
+.vd-panel .vd-small { font-size: 12.5px; font-style: italic; }
+.vd-panel .vd-muted { fill: var(--muted); }
+.vd-panel .vd-bad { fill: var(--warn); }
+.vd-panel .vd-good { fill: var(--primary); }
+.vd-box { fill: var(--surface); stroke: var(--border); }
+.vd-dot { fill: var(--surface-alt); stroke: var(--border); }
+.vd-ic { fill: none; stroke: var(--text); stroke-width: 1.8; stroke-linecap: round; }
+.vd-icf { fill: var(--text); }
+.vd-line { stroke: var(--muted); stroke-width: 3; stroke-linecap: round; }
+.vd-tunnel { fill: var(--primary); }
+.vd-lock { fill: var(--on-primary); }
+.vd-shackle { fill: none; stroke: var(--on-primary); stroke-width: 2; }
