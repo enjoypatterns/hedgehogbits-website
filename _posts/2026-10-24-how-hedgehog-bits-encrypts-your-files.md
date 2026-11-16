@@ -4,9 +4,18 @@ description: >-
   A walk through the vault's encryption: Argon2id key derivation, a wrapped master
   key, per-item HKDF keys and chunked AES-256-GCM, and why each choice was made.
 tags: [security, encryption, engineering]
+image:
+  path: /assets/blog/how-vault-file-encryption-works-social.jpg
+  width: 1200
+  height: 630
+  alt: "Illustration of a person at a table using their phone."
 ---
 
 This post explains, step by step, what happens between typing your password and seeing your photos. It is written for readers who want to understand the design, not only hear that it is "encrypted".
+
+<figure>
+  <img src="{{ '/assets/blog/how-vault-file-encryption-works.webp' | relative_url }}" width="1376" height="768" alt="Illustration of a person at a table using their phone. A stream of small tiles flows from the phone and forms a key that locks a photo inside nested boxes in a chest.">
+</figure>
 
 ## 1. Your password becomes a key
 

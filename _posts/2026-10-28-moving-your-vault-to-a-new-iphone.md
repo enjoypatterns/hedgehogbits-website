@@ -4,11 +4,20 @@ description: >-
   Hedgehog Bits stays out of iCloud and phone-to-phone transfer on purpose. Here is
   how to move your vault yourself with an encrypted backup file.
 tags: [backup, how-to, data ownership]
+image:
+  path: /assets/blog/move-vault-to-new-iphone-social.jpg
+  width: 1200
+  height: 630
+  alt: "Illustration of a hand carrying a sealed teal envelope from an old smartphone to a new one, with a laptop and a USB drive on the desk."
 ---
 
 A new iPhone usually copies everything across on its own. Hedgehog Bits is an exception, by design: the vault is left out of iCloud backups, computer backups and Quick Start transfer. That way, a copy of your vault only exists where you put one.
 
 Moving it takes a couple of minutes.
+
+<figure>
+  <img src="{{ '/assets/blog/move-vault-to-new-iphone.webp' | relative_url }}" width="1376" height="768" alt="Illustration of a hand carrying a sealed teal envelope from an old smartphone to a new one, with a laptop and a USB drive on the desk.">
+</figure>
 
 ## On your old iPhone
 

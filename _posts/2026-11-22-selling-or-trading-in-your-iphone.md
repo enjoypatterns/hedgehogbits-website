@@ -4,9 +4,18 @@ description: >-
   How to move a Hedgehog Bits vault to your new iPhone and make sure nothing private
   is left on the old one before you sell it, trade it in or give it away.
 tags: [how-to, backup, iphone]
+image:
+  path: /assets/blog/sell-or-trade-in-iphone-safely-social.jpg
+  width: 1200
+  height: 630
+  alt: "Illustration of a person at a shop counter handing over their old phone while holding a new one, as a small teal envelope passes from the old phone to the new."
 ---
 
 When you replace a phone, two things matter: your files should arrive safely on the new one, and nothing private should be left on the old one. Apple's [guide to selling or trading in an iPhone](https://support.apple.com/109511) covers the device as a whole. This post covers the vault.
+
+<figure>
+  <img src="{{ '/assets/blog/sell-or-trade-in-iphone-safely.webp' | relative_url }}" width="1376" height="768" alt="Illustration of a person at a shop counter handing over their old phone while holding a new one, as a small teal envelope passes from the old phone to the new.">
+</figure>
 
 ## Step 1: Move the vault first
 

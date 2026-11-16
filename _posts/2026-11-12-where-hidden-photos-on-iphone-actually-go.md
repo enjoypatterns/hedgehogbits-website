@@ -4,11 +4,20 @@ description: >-
   Hiding a photo on iPhone moves it out of view, not out of your library. How hidden
   photos interact with iCloud, your other devices, backups and Recently Deleted.
 tags: [iphone, icloud, privacy]
+image:
+  path: /assets/blog/where-hidden-photos-go-on-iphone-social.jpg
+  width: 1200
+  height: 630
+  alt: "Illustration of an open photo album with some photos turned face down."
 ---
 
 When you tap **Hide** on a photo, it disappears from your library view. It is easy to assume it has gone somewhere safer. In practice it stays in the same place, with a different label.
 
 This post explains where hidden photos live and who else might be able to see them, based on [Apple's own documentation](https://support.apple.com/104987).
+
+<figure>
+  <img src="{{ '/assets/blog/where-hidden-photos-go-on-iphone.webp' | relative_url }}" width="1376" height="768" alt="Illustration of an open photo album with some photos turned face down. Lines run from the album up to a cloud and down to a tablet and a laptop showing the same album.">
+</figure>
 
 ## They stay in your library
 

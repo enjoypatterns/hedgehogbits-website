@@ -4,11 +4,20 @@ description: >-
   Phones can be lost, stolen or inspected when you travel. A calm, practical approach
   to carrying less, backing up first and restoring your vault when you return.
 tags: [travel, privacy, how-to]
+image:
+  path: /assets/blog/travelling-with-private-files-iphone-social.jpg
+  width: 1200
+  height: 630
+  alt: "Illustration of a traveller at an airport gate with a small backpack and a phone."
 ---
 
 Travel puts your phone at more risk than usual. It can be lost in a taxi, stolen in a crowd, or inspected at a border. The most useful privacy habit for travel is a simple one: **carry less**.
 
 *This post is general information, not legal advice. Rules on device searches vary by country and can change.*
+
+<figure>
+  <img src="{{ '/assets/blog/travelling-with-private-files-iphone.webp' | relative_url }}" width="1376" height="768" alt="Illustration of a traveller at an airport gate with a small backpack and a phone. An inset shows a suitcase and a sealed teal box left safely on a shelf at home.">
+</figure>
 
 ## Before you go
 

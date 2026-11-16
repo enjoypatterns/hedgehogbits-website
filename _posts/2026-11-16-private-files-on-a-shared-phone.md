@@ -4,11 +4,20 @@ description: >-
   Partners, children and friends often pick up our phones. Practical ways to keep a
   few things private on a shared iPhone, and where a disguised vault helps.
 tags: [privacy, iphone, threat model]
+image:
+  path: /assets/blog/private-files-on-shared-phone-social.jpg
+  width: 1200
+  height: 630
+  alt: "Illustration of a family living room: a child plays a simple shapes game on a phone on the sofa, while a parent drinks tea and a friend chats nearby."
 ---
 
 Researchers who interviewed vault app users found that most people aren't worried about hackers. They are worried about the people around them: a friend swiping through photos, a child playing a game, a partner who knows the passcode. One participant put it simply: *"Say I'm in public… I don't want my nudes to pop up."* ([Geeng et al., SOUPS 2024](https://www.usenix.org/conference/soups2024/presentation/geeng))
 
 That kind of privacy is about everyday situations, so the answers are mostly practical ones.
+
+<figure>
+  <img src="{{ '/assets/blog/private-files-on-shared-phone.webp' | relative_url }}" width="1376" height="768" alt="Illustration of a family living room: a child plays a simple shapes game on a phone on the sofa, while a parent drinks tea and a friend chats nearby.">
+</figure>
 
 ## Start with what iPhone already offers
 

@@ -4,11 +4,20 @@ description: >-
   For most offline vault apps, including Hedgehog Bits, deleting the app deletes the
   vault. What is safe, what is not, and how to keep a copy first.
 tags: [backup, how-to, data ownership]
+image:
+  path: /assets/blog/deleting-vault-app-deletes-files-social.jpg
+  width: 1200
+  height: 630
+  alt: "Illustration of two movers wheeling away a cabinet full of photos while the owner holds one sealed teal box safely in their hands."
 ---
 
 **Short answer:** yes. If a vault keeps its files on the device, as Hedgehog Bits does, deleting the app deletes the vault with it.
 
 That surprises people, and it is the cause of many "I lost all my photos" reviews. Here is how it works on iPhone and how to avoid it.
+
+<figure>
+  <img src="{{ '/assets/blog/deleting-vault-app-deletes-files.webp' | relative_url }}" width="1376" height="768" alt="Illustration of two movers wheeling away a cabinet full of photos while the owner holds one sealed teal box safely in their hands.">
+</figure>
 
 ## Why the files go with the app
 

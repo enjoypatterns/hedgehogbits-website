@@ -4,11 +4,20 @@ description: >-
   Seven questions to ask before you put private photos or documents into any vault
   app, including ours: encryption, keys, accounts, backups and what happens if things go wrong.
 tags: [security, how-to, buying guide]
+image:
+  path: /assets/blog/how-to-choose-a-secure-vault-app-social.jpg
+  width: 1200
+  height: 630
+  alt: "Illustration of a person examining a small safe with a magnifying glass before putting photos and documents inside, with a checklist on the table."
 ---
 
 A vault app asks for a lot of trust. You are giving it the files you least want anyone else to see. Studies of vault apps have found that some of them [store "hidden" files unencrypted](https://par.nsf.gov/servlets/purl/10566080) behind a PIN screen, so it is worth checking before you commit.
 
 Here are the questions we would ask of any vault, with our own answers alongside.
+
+<figure>
+  <img src="{{ '/assets/blog/how-to-choose-a-secure-vault-app.webp' | relative_url }}" width="1376" height="768" alt="Illustration of a person examining a small safe with a magnifying glass before putting photos and documents inside, with a checklist on the table.">
+</figure>
 
 ## 1. Does it say how files are encrypted?
 

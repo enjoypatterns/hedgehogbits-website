@@ -4,11 +4,20 @@ description: >-
   Why we built a private iPhone vault that keeps everything on the device, with
   no accounts, no sync and no way for us to see your data.
 tags: [announcement, privacy, data ownership]
+image:
+  path: /assets/blog/private-offline-vault-for-iphone-social.jpg
+  width: 1200
+  height: 630
+  alt: "Illustration of a small hedgehog curled up beside a smartphone on a desk at home, with a faded dotted cloud above it, showing nothing is sent to a server."
 ---
 
 Most apps that store your private files ask you to trust them. You create an account, your data is uploaded, and from then on its safety depends on a company's servers, staff and policies.
 
 Hedgehog Bits takes a different approach. It is a vault for notes, photos, videos and documents that lives entirely on your iPhone. We don't run servers for it, we don't ask for an account, and we never receive your data. There is nothing on our side to breach, subpoena or misuse.
+
+<figure>
+  <img src="{{ '/assets/blog/private-offline-vault-for-iphone.webp' | relative_url }}" width="1376" height="768" alt="Illustration of a small hedgehog curled up beside a smartphone on a desk at home, with a faded dotted cloud above it, showing nothing is sent to a server.">
+</figure>
 
 ## Owning your data, in practice
 

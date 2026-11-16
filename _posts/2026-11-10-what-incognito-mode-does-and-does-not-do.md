@@ -5,6 +5,11 @@ description: >-
   It doesn't make you invisible online. A plain-language guide to what it hides,
   and from whom.
 tags: [privacy, how-to, iphone]
+image:
+  path: /assets/blog/what-incognito-mode-hides-social.jpg
+  width: 1200
+  height: 630
+  alt: "Illustration of a person walking along a beach while looking at their phone."
 ---
 
 Most web browsers have a private mode. Chrome calls it **Incognito**, Safari calls it **Private Browsing**, Firefox calls it a **Private Window** and Microsoft Edge calls it **InPrivate**. The names sound secretive, and many people think it hides more than it does.
@@ -12,6 +17,10 @@ Most web browsers have a private mode. Chrome calls it **Incognito**, Safari cal
 In a study of 460 people, more than half believed that searching in a private window stopped Google from saving those searches, even while they were signed in to their Google account. More than a third thought it stopped their employer from seeing what they visited. Neither is true ([Wu et al., 2018](https://cispa.de/en/research/publications/69070-your-secrets-are-safe-how-browsers-explanations-impact-misconceptions-about-private-browsing-mode)).
 
 Here is what it really does, in plain words.
+
+<figure>
+  <img src="{{ '/assets/blog/what-incognito-mode-hides.webp' | relative_url }}" width="1376" height="768" alt="Illustration of a person walking along a beach while looking at their phone. Their footprints are still visible behind them, and a lifeguard and passers-by can see them.">
+</figure>
 
 ## The short version
 

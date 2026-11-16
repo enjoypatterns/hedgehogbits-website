@@ -3,9 +3,18 @@ title: What a disguise can and cannot do
 description: >-
   Hedgehog Bits looks like a set of brain games. An honest look at what that cover protects against, where it stops, and what actually keeps your data safe.
 tags: [security, threat model, privacy]
+image:
+  path: /assets/blog/vault-app-disguise-vs-encryption-social.jpg
+  width: 1200
+  height: 630
+  alt: "Illustration of a hand opening a book on a bookshelf to reveal a steel safe hidden inside: a disguise on the outside, real protection within."
 ---
 
 Hedgehog Bits opens like a casual game. That is a useful feature, but it is easy to overstate. The cover decides whether anyone *notices* the vault. The encryption decides whether anyone can *open* it. Rely on the second, and treat the first as a convenience.
+
+<figure>
+  <img src="{{ '/assets/blog/vault-app-disguise-vs-encryption.webp' | relative_url }}" width="1376" height="768" alt="Illustration of a hand opening a book on a bookshelf to reveal a steel safe hidden inside: a disguise on the outside, real protection within.">
+</figure>
 
 ## What the cover is good for
 

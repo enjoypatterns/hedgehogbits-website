@@ -4,9 +4,18 @@ description: >-
   Passport scans, medical records and tax returns are among the most sensitive files on
   a phone. How to keep them encrypted, out of your photo library and off shared devices.
 tags: [how-to, documents, privacy]
+image:
+  path: /assets/blog/store-id-medical-tax-documents-on-iphone-social.jpg
+  width: 1200
+  height: 630
+  alt: "Illustration of a person at a desk photographing a document with their phone, with a passport, a medical folder and tax papers, and a lockable drawer of teal folders."
 ---
 
 Most of us carry copies of important documents on our phones: a passport scan for travel, a prescription, test results, a tax return, a lease. These files are useful to have with you and valuable to anyone who wants to impersonate you.
+
+<figure>
+  <img src="{{ '/assets/blog/store-id-medical-tax-documents-on-iphone.webp' | relative_url }}" width="1376" height="768" alt="Illustration of a person at a desk photographing a document with their phone, with a passport, a medical folder and tax papers, and a lockable drawer of teal folders.">
+</figure>
 
 ## Where these files usually end up
 

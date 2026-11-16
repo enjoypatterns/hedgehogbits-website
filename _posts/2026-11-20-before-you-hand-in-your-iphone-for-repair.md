@@ -4,9 +4,18 @@ description: >-
   A short privacy checklist for iPhone repairs: backups, passcodes, Find My, and how
   to make sure a vault survives the visit, or is not on the phone at all.
 tags: [how-to, iphone, privacy]
+image:
+  path: /assets/blog/prepare-iphone-for-repair-social.jpg
+  width: 1200
+  height: 630
+  alt: "Illustration of a customer handing a phone to a repair technician at a counter of tools, while tucking a small sealed teal package into their own bag."
 ---
 
 A repair means someone else handles your phone, and sometimes asks for your passcode. A few minutes of preparation protects both your data and your privacy.
+
+<figure>
+  <img src="{{ '/assets/blog/prepare-iphone-for-repair.webp' | relative_url }}" width="1376" height="768" alt="Illustration of a customer handing a phone to a repair technician at a counter of tools, while tucking a small sealed teal package into their own bag.">
+</figure>
 
 ## 1. Make a backup
 
