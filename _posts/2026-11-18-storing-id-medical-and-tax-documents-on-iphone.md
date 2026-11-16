@@ -39,6 +39,8 @@ Sometimes you have to send a scan to a landlord, an employer or a doctor. From t
 
 The receiving app, and the person you send it to, will then have their own copy. Share only what's needed, and prefer secure channels where you can.
 
+{% include post-link.html slug="what-your-screenshots-give-away" prefix="If you send a screenshot instead, check it first: see " text="what your screenshots give away" suffix="." %}
+
 ## Notes are documents too
 
 Account numbers, insurance policy details, recovery codes for important accounts: many people keep these in a notes app. Hedgehog Bits includes encrypted notes, saved inside the vault, so they don't sync to iCloud with your other notes.

@@ -105,5 +105,6 @@ The photo's hidden details matter too. This tool removes all of them from the sa
 - [See and remove the location in your photos]({{ '/tools/photo-metadata-remover/' | relative_url }})
 {% include post-link.html slug="private-files-on-a-shared-phone" text="Keeping private files private on a shared phone" prefix="- " %}
 {% include post-link.html slug="where-hidden-photos-on-iphone-actually-go" text="Where hidden photos on iPhone actually go" prefix="- " %}
+{% include post-link.html slug="what-your-screenshots-give-away" text="What your screenshots give away, and how to share safely" prefix="- " %}
 
 {% include app-card.html %}
