@@ -41,7 +41,7 @@ default-src 'none'; img-src 'self'{% if page.csp_img %} {{ page.csp_img }}{% end
 {%- endif %}
 <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M' }}">
 {%- for s in page.scripts %}
 <script src="{{ s | relative_url }}" defer></script>
 {%- endfor %}
