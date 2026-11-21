@@ -86,6 +86,8 @@ A VPN doesn't stop your phone from keeping your browsing history. A private wind
 
 If something under *What a VPN does* matters to you, a VPN is worth having. If what you want is to stop **Google, Facebook or other websites** from knowing what you do, it's the wrong tool. Sign in less, use private windows, and turn off tracking in your apps and browser instead.
 
+{% include post-link.html slug="which-browser-is-most-private" prefix="Your choice of browser makes a difference here: see " text="which browser is most private" suffix="." %}
+
 ## A VPN on iPhone
 
 Most VPN providers have an iPhone app that sets everything up for you. When you first open it, your iPhone asks for permission to add a VPN configuration. After that, you can switch the VPN on and off in the app, or in **Settings → VPN**. You can see and remove VPN configurations in **Settings → General → VPN & Device Management**.

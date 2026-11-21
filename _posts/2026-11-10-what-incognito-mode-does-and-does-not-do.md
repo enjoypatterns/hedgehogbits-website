@@ -54,6 +54,8 @@ As the Firefox screen above says, some browsers also turn on extra protection in
 
 This helps against other companies following you around. It doesn't change what the website you're on can see, as the next section explains.
 
+{% include post-link.html slug="which-browser-is-most-private" prefix="How much each browser blocks in normal windows varies too. See " text="which browser is most private" suffix="." %}
+
 ## What incognito mode doesn't do
 
 ### Websites still know it's you if you sign in
