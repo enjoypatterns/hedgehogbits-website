@@ -25,6 +25,7 @@ That kind of privacy is about everyday situations, so the answers are mostly pra
 - **Keep the Hidden album out of view.** In Photos settings you can choose whether the Hidden album is shown at all.
 - **Check what shows up elsewhere.** Photo widgets, Memories and shared albums can surface pictures you didn't expect.
 - **Be careful with shared Apple Accounts.** If a family shares one account, iCloud Photos puts the same library on every device.
+{% include post-link.html slug="which-iphone-apps-can-see-your-photos" prefix="- **Check which apps can see your photos.** Any app with full photo access can see every picture in your library. See " text="which iPhone apps can see your photos and location" suffix="." %}
 
 These steps help a lot, but they share one weakness: anyone who knows your device passcode can usually get past them.
 

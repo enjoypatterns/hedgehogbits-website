@@ -46,6 +46,8 @@ Deleting a photo moves it to **Recently Deleted**, where it stays for about 30 d
 
 Photos in a shared album or an iCloud Shared Photo Library are visible to the people you share with. Hiding a photo in your own view doesn't change what others can see in a shared space. Check where a photo lives before assuming it is private.
 
+{% include post-link.html slug="which-iphone-apps-can-see-your-photos" prefix="Other apps on your phone are a separate question: see " text="which iPhone apps can see your photos" suffix="." %}
+
 ## What this means in practice
 
 The Hidden album is a good way to keep photos out of sight while you scroll in front of others. If you also need them safe from someone who knows your passcode, or off your other devices, you have two broad options:
