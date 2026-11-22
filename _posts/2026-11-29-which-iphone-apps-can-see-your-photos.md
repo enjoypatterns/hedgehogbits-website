@@ -23,6 +23,23 @@ Most apps use what you give them sensibly. But over the years, apps collect more
 
 Go to **Settings → Privacy & Security**. Each type of information, such as Photos, Location Services or Contacts, lists the apps that asked for it and what they're allowed. For each app, pick the smallest option that still lets it do its job: selected photos instead of all of them, location only while you're using the app, a few contacts instead of the whole list.
 
+<ul class="feature-shots post-shots">
+  <li><figure>
+    <picture>
+      <source srcset="{{ '/assets/blog/iphone-privacy-and-security-settings-dark.webp' | relative_url }}" media="(prefers-color-scheme: dark)">
+      <img src="{{ '/assets/blog/iphone-privacy-and-security-settings-light.webp' | relative_url }}" width="600" height="1304" loading="lazy" alt="The Privacy & Security screen in iPhone Settings, listing Location Services, Tracking, Calendars, Contacts and other types of information, each with how many apps can use it.">
+    </picture>
+    <figcaption><strong>Privacy &amp; Security</strong> <span>Each type of information shows how many apps can use it.</span></figcaption>
+  </figure></li>
+  <li><figure>
+    <picture>
+      <source srcset="{{ '/assets/blog/iphone-app-location-access-options-dark.webp' | relative_url }}" media="(prefers-color-scheme: dark)">
+      <img src="{{ '/assets/blog/iphone-app-location-access-options-light.webp' | relative_url }}" width="600" height="1304" loading="lazy" alt="Location settings for the Maps app: Never, Ask Next Time or When I Share, While Using the App, and While Using the App or Widgets, with a Precise Location switch below.">
+    </picture>
+    <figcaption><strong>One app's location access</strong> <span>Choose when it can see your location, and how exactly.</span></figcaption>
+  </figure></li>
+</ul>
+
 ## How permissions work
 
 An app has to ask before it can use your photos, location, contacts, camera or microphone, and an app only appears in the list once it has asked ([Apple](https://support.apple.com/102515)). Saying no doesn't delete the app or anything in it. It just closes that door until you open it again.
@@ -45,7 +62,7 @@ Full Access makes sense for a backup or photo-editing app you trust. A shopping,
 Go to **Settings → Privacy & Security → Location Services** and tap an app:
 
 - **Never**
-- **Ask Next Time Or When I Share**
+- **Ask Next Time or When I Share**
 - **While Using the App**
 - **Always**, which some apps offer, lets the app check your location even when you're not using it.
 
