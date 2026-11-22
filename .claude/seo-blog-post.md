@@ -5,7 +5,11 @@ the skill's general guidance.
 
 ## Site
 - **What it is:** the website and blog for Hedgehog Bits, an encrypted, offline vault for iPhone
-  that looks like a set of brain games. It has no servers, no accounts and no sync. Product facts:
+  that looks like a set of brain games. It has no servers and no accounts. From the release that
+  adds it, Plus includes optional sync (Settings > Sync: the user's own iCloud or a folder in Files),
+  which uploads only ciphertext; posts from before that release describe the vault as never synced.
+  The sync post is `2026-12-01-sync-private-files-between-iphone-and-ipad.md`; its URL is hard-coded
+  in the app (`SyncSettings.articleURL`), so never rename or redate it without changing the app. Product facts:
   `features.md`, `security.md`, the post `2026-10-24-how-hedgehog-bits-encrypts-your-files.md`.
   The free tools are under `tools/`: photo metadata remover, photo blurrer and password checker.
 - **Generator:** Jekyll 3.10 (GitHub Pages).

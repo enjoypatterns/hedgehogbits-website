@@ -49,3 +49,4 @@ The backup is the vault's own ciphertext, packed into a single file. It is never
 - **It reveals size, not content.** Someone with the file can see roughly how big the vault is and how many items it holds, but nothing inside it.
 - **Where you keep it is your choice.** A USB drive in a drawer, an encrypted disk, or a cloud folder you already trust. Each has trade-offs, and you are best placed to judge them.
 - **Make one before you need it.** If your phone is lost or erased and you have no backup, the vault is gone too.
+{% include post-link.html slug="sync-private-files-between-iphone-and-ipad" prefix="- **Want two devices to stay the same instead?** See " text="how to sync private files between iPhone and iPad" suffix="." %}
