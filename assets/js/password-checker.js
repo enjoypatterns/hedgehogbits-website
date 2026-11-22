@@ -51,6 +51,9 @@
     for (var i = 0; i < units.length; i++) {
       if (seconds >= units[i][0]) {
         var n = Math.round(seconds / units[i][0]);
+        // Rounding up into the next unit says so: "1 hour", not "60 minutes".
+        if (i === 0 && n >= 100) return 'Centuries';
+        if (i > 0 && n * units[i][0] >= units[i - 1][0]) return '1 ' + units[i - 1][1];
         return n + ' ' + units[i][1] + (n === 1 ? '' : 's');
       }
     }
@@ -95,9 +98,11 @@
     if (typeof window.zxcvbn !== 'function') return;
     out.hidden = false;
 
-    var r = window.zxcvbn(pw.slice(0, MAX_SCORED));
+    // Counted in characters (code points), so an emoji counts once, as in the app.
+    var chars = Array.from(pw);
+    var r = window.zxcvbn(chars.slice(0, MAX_SCORED).join(''));
     var guesses = r.guesses;
-    if (pw.length > MAX_SCORED) guesses *= Math.pow(10, pw.length - MAX_SCORED);
+    if (chars.length > MAX_SCORED) guesses *= Math.pow(10, chars.length - MAX_SCORED);
 
     bar.setAttribute('data-score', String(r.score));
     label.textContent = LABELS[r.score];
