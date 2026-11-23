@@ -4,11 +4,20 @@ description: >-
   Keep private files the same on iPhone and iPad without buying more iCloud storage:
   sync encrypted copies through iCloud or a free Google Drive or Dropbox folder.
 tags: [backup, how-to, data ownership]
+image:
+  path: /assets/blog/sync-private-files-iphone-ipad-social.jpg
+  width: 1200
+  height: 630
+  alt: "Illustration of a person relaxing on a sofa with a tablet while a sealed teal envelope travels from their phone, through a small cloud, to the tablet."
 ---
 
 Keeping private files on two devices usually means trusting a cloud service with them. And if your iCloud storage is already full, the obvious option costs money.
 
 You don't need either. If what leaves your phone is already encrypted, it can go through any storage you have, free or paid, and the company holding it can't read it.
+
+<figure>
+  <img src="{{ '/assets/blog/sync-private-files-iphone-ipad.webp' | relative_url }}" width="1376" height="768" alt="Illustration of a person relaxing on a teal sofa in the evening, reading on a tablet. A sealed teal envelope follows a dotted path from the phone lying on the cushion, through a small cloud, to the tablet.">
+</figure>
 
 ## The short version
 
