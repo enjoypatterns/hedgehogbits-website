@@ -21,13 +21,13 @@ Open the vault, go to **Settings → Sync** and choose:
 - **iCloud.** The vault goes to a private area of your own iCloud that only the app can use. It's the simplest choice if you have room, but it counts against your iCloud storage, and the free plan is [5 GB shared with your backups and photos](https://support.apple.com/en-us/108922).
 - **Folder.** You pick a folder in the Files app, and the vault syncs through it. It works with any service that shows up in Files: Google Drive (its [15 GB free is shared with Gmail and Google Photos](https://support.google.com/googleone/answer/9312312)), Dropbox ([2 GB on the free Basic plan](https://help.dropbox.com/plans/dropbox-basic-faq)), OneDrive, Nextcloud, or a drive on your home network. Install the service's app first, and pick one of its folders, not one under **On My iPhone**, which stays on that phone.
 
-An empty folder of its own is best. A folder can hold only one vault: if you choose one that already holds a different vault, the app says so and won't sync with it.
+You don't need to tidy anything first: the app puts everything in a new **Hedgehog Bits** folder inside the one you choose, so your own files stay separate. Each Hedgehog Bits folder holds one vault. If it already holds a different one, the app says so and won't sync with it.
 
 ## Adding your iPad or a second iPhone
 
 1. Install Hedgehog Bits on the other device. It's made for iPhone, and it runs on iPad too.
 2. On the first screen, tap **Join a Synced Vault…**
-3. Choose **iCloud** (signed in to the same Apple Account) or **Folder** (the same folder).
+3. Choose **iCloud** (signed in to the same Apple Account) or **Folder**, then pick the **Hedgehog Bits** folder, or the folder that contains it.
 4. Enter your vault password. It's checked before anything is saved on the device.
 
 The vault then downloads. From then on, both devices keep each other up to date.
