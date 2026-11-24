@@ -3,6 +3,7 @@ title: Travelling with private files on your iPhone
 description: >-
   Phones can be lost, stolen or inspected when you travel. A calm, practical approach
   to carrying less, backing up first and restoring your vault when you return.
+last_modified_at: 2026-11-24
 tags: [travel, privacy, how-to]
 image:
   path: /assets/blog/travelling-with-private-files-iphone-social.jpg
@@ -22,12 +23,14 @@ Travel puts your phone at more risk than usual. It can be lost in a taxi, stolen
 ## Before you go
 
 1. **Back up your iPhone** in the usual way, so a lost phone isn't a lost life.
-2. **Export your vault** with **Settings → Export Backup…**, and keep the file at home on a Mac or USB drive. Hedgehog Bits isn't part of iCloud or computer backups, so this is the only copy that will survive if the phone is lost.
+2. **Export your vault** with **Settings → Export Backup…**, and keep the file at home on a Mac or USB drive. Unless you use sync or have turned on **Include in iPhone Backups**, this is the only copy that will survive if the phone is lost.
 3. **Decide what you need on the trip.** Usually that is a copy of your passport, insurance details and booking documents. The rest can stay at home.
 
 ## Option A: travel with a smaller vault
 
 Remove what you don't need on the trip from the vault, keeping the full backup at home. If the phone is lost, you lose very little, and the exported backup brings everything back.
+
+If you use sync, deleting something from the vault deletes it from the synced copy and your other devices too. Rely on the exported backup to bring it back, or use Option B instead.
 
 ## Option B: travel without a vault
 
@@ -36,6 +39,8 @@ For the most cautious approach:
 1. Export the vault and check that the backup file is saved and safe.
 2. Use **Settings → Erase Vault**.
 3. When you're home, restore from the backup.
+
+If you use sync, **Erase Vault** leaves the synced copy alone unless you choose to delete it too. When you're home, tap **Join a Synced Vault…** on the first screen and enter your password.
 
 Nothing private is on the phone while you travel, so there is nothing to protect and nothing to explain.
 
@@ -50,7 +55,7 @@ Border officials in many countries have broad powers to inspect devices, and the
 
 - Use Find My to locate, lock or erase it.
 - The vault is protected by its own encryption and password, separate from your device passcode.
-- When you have a replacement, install Hedgehog Bits and restore your backup.
+- When you have a replacement, install Hedgehog Bits and restore your backup, or tap **Join a Synced Vault…** if you use sync.
 
 ## Related
 

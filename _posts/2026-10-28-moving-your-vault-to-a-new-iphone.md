@@ -1,8 +1,10 @@
 ---
 title: Moving your vault to a new iPhone
 description: >-
-  Hedgehog Bits stays out of iCloud and phone-to-phone transfer on purpose. Here is
-  how to move your vault yourself with an encrypted backup file.
+  Hedgehog Bits stays out of iCloud and phone-to-phone transfer unless you choose
+  otherwise. Here is how to move your vault: with sync, an iPhone backup, or an
+  encrypted backup file.
+last_modified_at: 2026-11-24
 tags: [backup, how-to, data ownership]
 image:
   path: /assets/blog/move-vault-to-new-iphone-social.jpg
@@ -11,9 +13,13 @@ image:
   alt: "Illustration of a hand carrying a sealed teal envelope from an old smartphone to a new one, with a laptop and a USB drive on the desk."
 ---
 
-A new iPhone usually copies everything across on its own. Hedgehog Bits is an exception, by design: the vault is left out of iCloud backups, computer backups and Quick Start transfer. That way, a copy of your vault only exists where you put one.
+A new iPhone usually copies everything across on its own. Hedgehog Bits is an exception, by design: unless you choose otherwise, the vault is left out of iCloud backups, computer backups and Quick Start transfer. That way, a copy of your vault only exists where you put one.
 
-Moving it takes a couple of minutes.
+There are three ways to move it, and each takes a couple of minutes:
+
+- **If you use sync** (Hedgehog Bits Plus): install Hedgehog Bits on the new iPhone, tap **Join a Synced Vault…** on the first screen and enter your password. [How to sync private files between iPhone and iPad]({{ site.baseurl }}{% post_url 2026-11-23-sync-private-files-between-iphone-and-ipad %}) explains it.
+- **If you turned on Settings → Include in iPhone Backups**: set up the new iPhone from an iCloud or computer backup made since, and the vault comes back. For iCloud, iCloud Backup must be on in your iPhone's Settings.
+- **Otherwise, with a backup file**, as below.
 
 <figure>
   <img src="{{ '/assets/blog/move-vault-to-new-iphone.webp' | relative_url }}" width="1376" height="768" alt="Illustration of a hand carrying a sealed teal envelope from an old smartphone to a new one, with a laptop and a USB drive on the desk.">
@@ -48,5 +54,5 @@ The backup is the vault's own ciphertext, packed into a single file. It is never
 - **A backup is a snapshot.** It contains what was in the vault when you exported it. Export again after adding important files.
 - **It reveals size, not content.** Someone with the file can see roughly how big the vault is and how many items it holds, but nothing inside it.
 - **Where you keep it is your choice.** A USB drive in a drawer, an encrypted disk, or a cloud folder you already trust. Each has trade-offs, and you are best placed to judge them.
-- **Make one before you need it.** If your phone is lost or erased and you have no backup, the vault is gone too.
+- **Make one before you need it.** If your phone is lost or erased and you have no backup, no iPhone backup that includes the vault and no sync, the vault is gone too.
 {% include post-link.html slug="sync-private-files-between-iphone-and-ipad" prefix="- **Want two devices to stay the same instead?** See " text="how to sync private files between iPhone and iPad" suffix="." %}

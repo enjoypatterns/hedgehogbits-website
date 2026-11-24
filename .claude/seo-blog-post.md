@@ -4,10 +4,13 @@ Read by the `seo-blog-post` skill (`~/.claude/skills/seo-blog-post/`). Facts her
 the skill's general guidance.
 
 ## Site
-- **What it is:** the website and blog for Hedgehog Bits, an encrypted, offline vault for iPhone
-  that looks like a set of brain games. It has no servers and no accounts. From the release that
-  adds it, Plus includes optional sync (Settings > Sync: the user's own iCloud or a folder in Files),
-  which uploads only ciphertext; posts from before that release describe the vault as never synced.
+- **What it is:** the website and blog for Hedgehog Bits, an encrypted vault for iPhone that looks
+  like a set of brain games. It has no servers of ours and no accounts. Since 1.1, Plus includes
+  optional sync (Settings > Sync: the user's own iCloud or a folder in Files), which uploads only
+  ciphertext, and Settings > Include in iPhone Backups puts the encrypted vault in iCloud or computer
+  backups (off by default). Never say the vault is offline-only, never synced or never in backups.
+  Call it "optional, safe sync"; "military-grade" only next to "AES-256". The site was updated for
+  this on 24 November 2026; the launch post keeps its original story under an update note.
   The sync post is `2026-11-23-sync-private-files-between-iphone-and-ipad.md`; its URL is hard-coded
   in the app (`SyncSettings.articleURL`), so never rename or redate it without changing the app. Product facts:
   `features.md`, `security.md`, the post `2026-10-24-how-hedgehog-bits-encrypts-your-files.md`.

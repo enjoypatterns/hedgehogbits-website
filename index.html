@@ -1,23 +1,24 @@
 ---
 layout: default
 description: >-
-  An encrypted vault for notes, photos, videos and files that lives only on your iPhone. No servers, no accounts, no sync. It opens like a set of brain games.
+  An encrypted vault for notes, photos, videos and files on your iPhone, with military-grade AES-256 encryption and optional, safe sync. No accounts, no servers of ours. It opens like a set of brain games.
 ---
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
       <p class="eyebrow">Private vault for iPhone</p>
-      <h1>Your files, encrypted on your iPhone and nowhere else.</h1>
+      <h1>Your files, encrypted on your iPhone. Copied only where you choose.</h1>
       <p class="lead">
         Hedgehog Bits keeps notes, photos, videos and documents in an encrypted vault on your device.
-        There are no servers, no accounts and no sync, so your data stays in your hands.
+        There are no accounts and no servers of ours, so your data stays in your hands. Optional, safe sync
+        keeps it on your other devices through your own iCloud or a folder you choose, and only encrypted files leave your iPhone.
         To anyone else, it looks like a small collection of brain games.
       </p>
       <div class="actions">
         {% include app-store-button.html %}
         <a class="button button-secondary" href="{{ '/security/' | relative_url }}">Read the security design</a>
       </div>
-      <p class="muted small hero-note">For iPhone, {{ site.app.os_requirement }}. Works fully offline. <a href="{{ '/demo/' | relative_url }}">See how it works, step by step</a>.</p>
+      <p class="muted small hero-note">For iPhone, {{ site.app.os_requirement }}. Works offline. <a href="{{ '/demo/' | relative_url }}">See how it works, step by step</a>.</p>
     </div>
     <figure class="hero-demo">
       <div class="phone phone-video">
@@ -59,13 +60,13 @@ description: >-
     <div class="grid">
       <div class="card">
         <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="3"/><path d="M10 18.5h4"/></svg>
-        <h3>Stays on your device</h3>
-        <p class="muted">Everything is stored on your iPhone. The vault is excluded from iCloud and computer backups and from phone-to-phone transfer.</p>
+        <h3>Stays on your device, unless you choose</h3>
+        <p class="muted">Everything is stored on your iPhone and left out of iCloud and computer backups by default. Turn on sync or iPhone backups and an encrypted copy goes where you choose.</p>
       </div>
       <div class="card">
         <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18"/><path d="M8.5 5.6A9 9 0 0 1 21 12a9 9 0 0 1-1.6 2.4M5.2 7.6A9 9 0 0 0 3 12a9 9 0 0 0 13.5 7.8"/></svg>
-        <h3>No servers, no accounts</h3>
-        <p class="muted">No sign-up, no email address, no sync service and no analytics. The app does not need a network connection to work.</p>
+        <h3>No servers of ours, no accounts</h3>
+        <p class="muted">No sign-up, no email address and no analytics. Sync uses your own iCloud or folder, never ours. Everything else works without a network connection.</p>
       </div>
       <div class="card">
         <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></svg>
@@ -149,7 +150,7 @@ description: >-
       <p class="muted">Sometimes the most useful list is the short one.</p>
     </div>
     <ul class="not-list">
-      <li>No accounts</li><li>No cloud storage</li><li>No sync</li><li>No analytics or tracking</li>
+      <li>No accounts</li><li>No servers of ours</li><li>No unencrypted uploads</li><li>No analytics or tracking</li>
       <li>No advertising</li><li>No third-party keyboards</li><li>No password recovery</li><li>No back doors</li>
     </ul>
   </div>

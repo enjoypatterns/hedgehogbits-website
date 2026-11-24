@@ -7,15 +7,17 @@ sitemap: false
 
 > {{ site.description | strip }}
 
-Hedgehog Bits is an iPhone app ({{ site.app.os_requirement }}). It opens with the question "Who is playing?". Typing the vault password opens an encrypted vault; any other answer opens ten brain games. All data stays on the device. There is no server, account, sync, analytics, advertising or password recovery.
+Hedgehog Bits is an iPhone app ({{ site.app.os_requirement }}). It opens with the question "Who is playing?". Typing the vault password opens an encrypted vault; any other answer opens ten brain games. Data is encrypted on the device and stays there unless the user turns on optional sync (Hedgehog Bits Plus) or iPhone backups, or exports a backup; only encrypted files ever leave the iPhone. There are no servers run by the developer, no accounts, analytics, advertising or password recovery.
 
 Key facts:
 
-- Platform: iPhone, {{ site.app.os_requirement }}. Works fully offline.
+- Platform: iPhone, {{ site.app.os_requirement }}. Works offline; sync needs a connection.
 - Stores: notes, photos, videos, audio, PDFs, text and other files, in folders.
 - Encryption: Argon2id (256 MiB, 3 passes) password key; random 256-bit master key wrapped with AES-256-GCM; per-item HKDF-SHA256 keys; AES-256-GCM in authenticated 1 MiB chunks.
-- Storage: on the device only; excluded from iCloud backups, computer backups and Quick Start transfer; iOS FileProtection.complete.
-- Backup: manual export to one encrypted `.hhbits` file, protected by an HMAC; all-or-nothing restore on a new iPhone.
+- Storage: on the device; by default excluded from iCloud backups, computer backups and Quick Start transfer; iOS FileProtection.complete.
+- Sync (optional, Plus): through the user's own iCloud (a private CloudKit database) or a folder they choose in the Files app (e.g. Google Drive, Dropbox); only ciphertext is uploaded; a new device joins with the vault password.
+- iPhone backups (optional): Settings → Include in iPhone Backups puts the encrypted vault in iCloud or computer backups.
+- Backup: export to one encrypted `.hhbits` file, protected by an HMAC; all-or-nothing restore on a new iPhone.
 - Forgotten password: the vault cannot be recovered by anyone.
 - Availability: [App Store]({{ site.app_store_url }}), free with an optional Plus upgrade.
 
@@ -26,7 +28,7 @@ Key facts:
 - [Demo]({{ '/demo/' | absolute_url }}): a 50-second video and a step-by-step walkthrough with screenshots
 - [Security design]({{ '/security/' | absolute_url }}): cryptography, iOS hardening, backups and known limitations
 - [FAQ]({{ '/faq/' | absolute_url }}): common questions and answers
-- [Privacy policy]({{ '/privacy/' | absolute_url }}): no data is collected by the app or this website
+- [Privacy policy]({{ '/privacy/' | absolute_url }}): no data is collected by the app or this website; optional sync uses the user's own iCloud or folder
 - [Feedback]({{ '/feedback/' | absolute_url }}): request features or report bugs by email at {{ site.contact_email }}
 
 ## Comparisons

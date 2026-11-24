@@ -10,7 +10,7 @@ lead: >-
   disguise is now widely known, and the security behind it varies a great deal.
 permalink: /compare/calculator-vault-apps/
 last_reviewed: 2026-11-04
-last_modified_at: 2026-11-04
+last_modified_at: 2026-11-24
 ---
 
 *Last reviewed {{ page.last_reviewed | date: "%-d %B %Y" }}.*
@@ -29,7 +29,7 @@ Hedgehog Bits uses the same principle with a different cover: it opens as a set 
 | How well known the cover is | Widely known, and often featured in parenting and safety guides | Less common |
 | Unlock | Usually a short numeric PIN | A password of any length and characters |
 | Encryption | Varies by app. Some encrypt files; others only put a PIN screen in front of them | Always: Argon2id and AES-256-GCM, documented publicly |
-| Accounts and cloud | Varies. Some require an account or offer cloud backup | None |
+| Accounts and cloud | Varies. Some require an account or offer cloud backup | No account and no servers of ours. Optional sync through your own iCloud or folder, encrypted first |
 | Ads and tracking | Common in free versions | None |
 | Extra features | Often break-in photos, decoy PINs, fake icons | Locks on leaving the app, blocks third-party keyboards, private camera |
 

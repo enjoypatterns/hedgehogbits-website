@@ -4,13 +4,13 @@ section: compare
 order: 1
 eyebrow: Compare
 description: >-
-  The iPhone Hidden album keeps photos out of view behind Face ID. Hedgehog Bits encrypts them with its own password and keeps them off iCloud. The difference.
+  The iPhone Hidden album keeps photos out of view behind Face ID. Hedgehog Bits encrypts them with its own password, and anything it syncs is encrypted first. The difference.
 lead: >-
   Apple's Hidden album is built in, free and convenient. It is designed to keep photos
   out of sight, which is different from keeping them encrypted under a key only you hold.
 permalink: /compare/iphone-hidden-album/
-last_reviewed: 2026-11-04
-last_modified_at: 2026-11-04
+last_reviewed: 2026-11-24
+last_modified_at: 2026-11-24
 ---
 
 *Last reviewed {{ page.last_reviewed | date: "%-d %B %Y" }}.*
@@ -18,7 +18,7 @@ last_modified_at: 2026-11-04
 ## The short answer
 
 - **Use the Hidden album** if you want certain photos out of your main library and the people around you are not going to try to get past Face ID or your passcode.
-- **Use a vault like Hedgehog Bits** if you want files protected by a password that is separate from your phone's passcode, kept out of iCloud, and covering documents and notes as well as photos.
+- **Use a vault like Hedgehog Bits** if you want files protected by a password that is separate from your phone's passcode, encrypted before any copy reaches iCloud, and covering documents and notes as well as photos.
 
 ## Side by side
 
@@ -26,12 +26,12 @@ last_modified_at: 2026-11-04
 |---|---|---|
 | What unlocks it | Face ID, Touch ID or the **device passcode** | A **separate vault password** |
 | Encryption | Protected by iOS like the rest of your library | Its own encryption: Argon2id and AES-256-GCM, keyed from the vault password |
-| iCloud | Syncs with iCloud Photos if that is on | Never synced, never in iCloud or computer backups |
-| Who holds the keys in iCloud | Apple, unless you turn on Advanced Data Protection | Not applicable: nothing is uploaded |
-| Other devices | Hidden photos also appear (hidden) on your other devices | Only on the iPhone it lives on |
+| iCloud | Syncs with iCloud Photos if that is on | Off by default. Optional sync (Plus) and iPhone backups upload only encrypted files |
+| Who holds the keys in iCloud | Apple, unless you turn on Advanced Data Protection | Only you: the key comes from your vault password |
+| Other devices | Hidden photos also appear (hidden) on your other devices | Only where you turn on sync, through your iCloud or a folder you choose |
 | What it holds | Photos and videos | Photos, videos, audio, notes, PDFs and other files |
 | Visible that it exists | The Hidden album can be shown or hidden in Photos settings | Looks like a set of brain games |
-| Moving to a new iPhone | Automatic with iCloud Photos or a device backup | Manual: you export one encrypted file and restore it |
+| Moving to a new iPhone | Automatic with iCloud Photos or a device backup | Join your synced vault, restore an iPhone backup that includes it, or restore an exported file |
 | If you forget the password | Your passcode or Apple Account recovery | No recovery |
 | Cost | Included with iOS | See the App Store listing |
 
@@ -51,7 +51,7 @@ For a lot of people, that is enough. It stops a photo from appearing while you s
 ## Where Hedgehog Bits is different
 
 - The vault password is separate from your device passcode. Knowing how to unlock the phone does not open the vault.
-- Files are encrypted by the app itself and never leave the iPhone unless you export a backup.
+- Files are encrypted by the app itself, and only encrypted copies leave the iPhone: when you turn on sync or iPhone backups, or export a backup.
 - It holds documents and notes, not only photos.
 - It doesn't look like a vault. To someone else, it opens as ten small games.
 
@@ -59,7 +59,7 @@ For a lot of people, that is enough. It stops a photo from appearing while you s
 
 We think these are worth being clear about:
 
-- **You manage backups.** Nothing is copied to iCloud. If you lose your phone without an exported backup, the vault is gone.
+- **You choose the backups.** Nothing is copied anywhere until you turn on sync or iPhone backups, or export a backup. If you lose your phone without any of them, the vault is gone.
 - **No password recovery.** If you forget the vault password, nobody can open it, including us.
 - **Moving photos in is a deliberate step.** After importing, remove the originals from Photos and empty *Recently Deleted*.
 

@@ -2,7 +2,8 @@
 title: "Introducing Hedgehog Bits: a vault with no servers"
 description: >-
   Why we built a private iPhone vault that keeps everything on the device, with
-  no accounts, no sync and no way for us to see your data.
+  no accounts and no way for us to see your data.
+last_modified_at: 2026-11-24
 tags: [announcement, privacy, data ownership]
 image:
   path: /assets/blog/private-offline-vault-for-iphone-social.jpg
@@ -10,6 +11,10 @@ image:
   height: 630
   alt: "Illustration of a small hedgehog curled up beside a smartphone on a desk at home, with a faded dotted cloud above it, showing nothing is sent to a server."
 ---
+
+<div class="callout">
+  <p><strong>Update, 24 November 2026:</strong> Hedgehog Bits 1.1 adds optional, safe sync (part of Hedgehog Bits Plus) through your own iCloud or a folder you choose, and an option to include the vault in your iPhone backups. Both are off until you turn them on, and only encrypted files leave your iPhone. We still run no servers. See <a href="{{ site.baseurl }}{% post_url 2026-11-23-sync-private-files-between-iphone-and-ipad %}">how to sync private files between iPhone and iPad</a>.</p>
+</div>
 
 Most apps that store your private files ask you to trust them. You create an account, your data is uploaded, and from then on its safety depends on a company's servers, staff and policies.
 
@@ -24,7 +29,7 @@ Hedgehog Bits takes a different approach. It is a vault for notes, photos, video
 "You own your data" is easy to write in a privacy policy. We wanted it to be a property of the design instead:
 
 - **The key comes from your password.** Your password is turned into an encryption key on the device. We never see either.
-- **There is no copy elsewhere.** The vault is excluded from iCloud backups, computer backups and phone-to-phone transfer.
+- **There is no copy elsewhere unless you make one.** By default the vault is excluded from iCloud backups, computer backups and phone-to-phone transfer.
 - **You decide where backups go.** When you want a copy, you export one encrypted file and put it wherever you trust: a Mac, a USB drive, a folder of your choice.
 - **There is no recovery.** This is the trade-off. If nobody else can open your vault, nobody else can reset its password either.
 

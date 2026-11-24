@@ -2,6 +2,7 @@
 title: What a disguise can and cannot do
 description: >-
   Hedgehog Bits looks like a set of brain games. An honest look at what that cover protects against, where it stops, and what actually keeps your data safe.
+last_modified_at: 2026-11-24
 tags: [security, threat model, privacy]
 image:
   path: /assets/blog/vault-app-disguise-vs-encryption-social.jpg
@@ -43,8 +44,8 @@ The cover doesn't help in these cases:
 The protection comes from encryption and from your password:
 
 - Your password is stretched with **Argon2id** (256 MiB, 3 passes), so guessing is slow and expensive.
-- Your files are encrypted with **AES-256-GCM**, each with its own key, and stored only on your iPhone.
-- There are **no servers and no recovery mechanism**, so there is no second way in.
+- Your files are encrypted with **AES-256-GCM**, each with its own key, on your iPhone. Anything you sync or back up is encrypted the same way first.
+- There are **no servers of ours and no recovery mechanism**, so there is no second way in.
 
 This means the most important decision is your password. A few random words, such as *"copper lantern orbit meadow"*, is far stronger than a short word with a number, and still easy to remember. The app shows a strength estimate when you choose it.
 

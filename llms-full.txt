@@ -12,7 +12,7 @@ Contact: {{ site.contact_email }} (feature requests, bug reports and security is
 
 ## What it is
 
-Hedgehog Bits is a private, offline vault for iPhone ({{ site.app.os_requirement }}). It keeps notes, photos, videos and files encrypted on the device. To anyone else it looks like a small collection of brain games.
+Hedgehog Bits is a private, encrypted vault for iPhone ({{ site.app.os_requirement }}). It keeps notes, photos, videos and files encrypted on the device. To anyone else it looks like a small collection of brain games.
 
 The app opens with a line-art hedgehog and the question "Who is playing?".
 
@@ -31,11 +31,13 @@ A 50-second silent video of the app and a step-by-step walkthrough with screensh
 
 ## Data ownership
 
-- No servers, no accounts, no sync, no analytics, no advertising.
-- Data is stored only on the iPhone and excluded from iCloud backups, computer backups and Quick Start phone-to-phone transfer.
+- No servers run by the developer, no accounts, no analytics, no advertising.
+- Data is stored on the iPhone and, by default, excluded from iCloud backups, computer backups and Quick Start phone-to-phone transfer.
+- Optional sync (Hedgehog Bits Plus): through the user's own iCloud (a private CloudKit database only the app uses) or a folder chosen in the Files app, such as Google Drive or Dropbox. Only ciphertext leaves the iPhone; the storage provider sees file counts, sizes and timing, not names or contents. Another device joins with "Join a Synced Vault…" and the password.
+- Optional iPhone backups: Settings → Include in iPhone Backups lets the encrypted vault into iCloud or computer backups.
 - The encryption key is derived from the user's password on the device. The developers never receive data or passwords.
 - There is no password recovery and no back door. A forgotten password means the vault cannot be opened.
-- Users move or back up the vault themselves with an encrypted export file.
+- Users can also move or back up the vault themselves with an encrypted export file.
 
 ## Features
 
@@ -45,7 +47,7 @@ A 50-second silent video of the app and a step-by-step walkthrough with screensh
 - Camera: capture photos and videos directly into the vault, bypassing the photo library.
 - Documents: PDFs, text and other files from the Files app, viewed in the app or via Quick Look.
 - Folders: nested folders, moving items, drag and drop within the app only.
-- Settings: change password (re-wraps the master key only), storage usage, export backup, erase vault.
+- Settings: change password (re-wraps the master key only), sync, include in iPhone backups, storage usage, export backup, erase vault (optionally with the synced copy), feedback.
 
 ## Games
 
@@ -68,7 +70,7 @@ A 50-second silent video of the app and a step-by-step walkthrough with screensh
 - Per-item keys: HKDF-SHA256 from the master key for every file, thumbnail and the encrypted index of names and folders.
 - Content: AES-256-GCM in 1 MiB chunks; each chunk's authentication covers its index and a final-chunk flag, detecting tampering, reordering and truncation.
 - No plaintext at rest: content is decrypted in memory; video and audio decrypt byte ranges on demand; temporary files for sharing or Quick Look are deleted on close and on lock.
-- iOS hardening: FileProtection.complete; excluded from backups; locks as soon as the app leaves the foreground; app switcher shows only the hedgehog; third-party keyboards blocked; autocorrect, predictions and Writing Tools disabled in the name field.
+- iOS hardening: FileProtection.complete; excluded from backups unless the user turns them on; locks as soon as the app leaves the foreground; app switcher shows only the hedgehog; third-party keyboards blocked; autocorrect, predictions and Writing Tools disabled in the name field.
 - Cancellation: unlocks, vault creation, imports and saves are cancelled or discarded if the app locks mid-way; a closed session never writes again.
 - Libraries: Apple CryptoKit and libsodium.
 
@@ -85,7 +87,8 @@ A 50-second silent video of the app and a step-by-step walkthrough with screensh
 - The password is visible while typed, because the field is a name field. It clears when the app leaves the foreground.
 - Photos removed from the library remain in Photos' Recently Deleted album for up to 30 days.
 - No password recovery.
-- Without an exported backup, losing or erasing the iPhone loses the vault.
+- Without sync, an iPhone backup that includes the vault, or an exported backup, losing or erasing the iPhone loses the vault.
+- Synced and backed-up copies lack the iPhone's passcode protection, so they can be tested against password guesses offline; a long password matters.
 - The game cover is not a security boundary; anyone who knows the app knows a vault may exist.
 - No app can protect data on a compromised (malware or jailbroken) device.
 

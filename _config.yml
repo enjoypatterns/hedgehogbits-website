@@ -2,11 +2,12 @@
 # Built with Jekyll for GitHub Pages. See README.md for local preview and deployment.
 
 title: Hedgehog Bits
-tagline: A private, offline vault for iPhone
+tagline: A private, encrypted vault for iPhone
 description: >-
-  Hedgehog Bits is an encrypted, offline vault for iPhone that looks like a
-  collection of quick brain games. Notes, photos, videos and files are encrypted
-  on the device with Argon2id and AES-256-GCM. No servers, no accounts, no sync.
+  Hedgehog Bits is an encrypted vault for iPhone that looks like a collection of
+  quick brain games. Notes, photos, videos and files are encrypted on the device
+  with Argon2id and AES-256-GCM. No accounts, no servers of ours, and optional,
+  safe sync through your own iCloud or a folder you choose.
 lang: en
 
 # Set these when you know the final address.
@@ -76,7 +77,7 @@ defaults:
         path: /assets/images/og-image.png
         width: 1200
         height: 630
-        alt: "Hedgehog Bits: a private, offline vault for iPhone"
+        alt: "Hedgehog Bits: a private, encrypted vault for iPhone"
 
 exclude:
   - README.md

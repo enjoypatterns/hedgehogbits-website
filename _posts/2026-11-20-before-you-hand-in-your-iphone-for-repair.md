@@ -3,6 +3,7 @@ title: Before you hand in your iPhone for repair
 description: >-
   A short privacy checklist for iPhone repairs: backups, passcodes, Find My, and how
   to make sure a vault survives the visit, or is not on the phone at all.
+last_modified_at: 2026-11-24
 tags: [how-to, iphone, privacy]
 image:
   path: /assets/blog/prepare-iphone-for-repair-social.jpg
@@ -23,12 +24,12 @@ Repairs sometimes end with a replacement device or an erased phone. Back up your
 
 ## 2. Export your vault separately
 
-Hedgehog Bits is deliberately **not** included in iCloud or computer backups, so a normal backup won't save it.
+By default, Hedgehog Bits is deliberately **not** included in iCloud or computer backups, so a normal backup won't save it. If you've turned on **Settings → Include in iPhone Backups** or you use sync, you already have a copy, but an exported file costs nothing and doesn't depend on either.
 
 1. Open the vault and choose **Settings → Export Backup…**
 2. Save the `.hhbits` file to a Mac, a USB drive or another place off the phone.
 
-If the phone comes back erased or replaced, install Hedgehog Bits and choose **Restore from Backup…**
+If the phone comes back erased or replaced, install Hedgehog Bits and choose **Restore from Backup…**, or **Join a Synced Vault…** if you use sync.
 
 ## 3. Decide whether the vault should be on the phone at all
 

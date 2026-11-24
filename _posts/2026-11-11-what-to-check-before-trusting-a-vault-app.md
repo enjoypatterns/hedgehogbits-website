@@ -3,6 +3,7 @@ title: What to check before trusting a vault app
 description: >-
   Seven questions to ask before you put private photos or documents into any vault
   app, including ours: encryption, keys, accounts, backups and what happens if things go wrong.
+last_modified_at: 2026-11-24
 tags: [security, how-to, buying guide]
 image:
   path: /assets/blog/how-to-choose-a-secure-vault-app-social.jpg
@@ -41,13 +42,13 @@ An account links your vault to an email address, a payment method or a phone num
 
 Some vaults upload files to their own servers. Some leave originals in your photo library or in iCloud. Check where your files live after import, and whether the originals are removed.
 
-**Hedgehog Bits:** Only on your iPhone. The vault is excluded from iCloud and computer backups. After import, the app can offer to remove the originals from Photos. You then need to empty *Recently Deleted* too.
+**Hedgehog Bits:** On your iPhone. By default the vault is excluded from iCloud and computer backups. If you turn on sync or iPhone backups, only encrypted copies go to your own iCloud, a folder you choose or your backups, never to us. After import, the app can offer to remove the originals from Photos. You then need to empty *Recently Deleted* too.
 
 ## 5. What happens when you get a new phone?
 
 This is the most common source of lost files in vault app reviews. Find out before you need to.
 
-**Hedgehog Bits:** You export one encrypted backup file and restore it on the new phone. See [Moving your vault to a new iPhone]({{ site.baseurl }}{% post_url 2026-10-28-moving-your-vault-to-a-new-iphone %}).
+**Hedgehog Bits:** Join your synced vault on the new phone with your password, set it up from an iPhone backup that includes the vault, or export one encrypted backup file and restore it. See [Moving your vault to a new iPhone]({{ site.baseurl }}{% post_url 2026-10-28-moving-your-vault-to-a-new-iphone %}).
 
 ## 6. What happens if you forget the password?
 
@@ -59,7 +60,7 @@ If a company can reset your password, it has a way in. That may be a fair trade 
 
 Apps are discontinued, removed from the App Store or change their pricing. Ask whether you can still get your files out.
 
-**Hedgehog Bits:** It works without any server, so an installed copy keeps working. Your exported backups stay in your hands.
+**Hedgehog Bits:** It works without any server of ours, so an installed copy keeps working. Sync uses your own iCloud or folder, and your exported backups stay in your hands.
 
 ## A note on reviews
 

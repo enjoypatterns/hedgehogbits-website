@@ -2,11 +2,12 @@
 title: Features
 eyebrow: Features
 description: >-
-  What Hedgehog Bits can do: an encrypted iPhone vault for notes, photos, videos and files, with folders, search, a document scanner, a decoy vault, flip-to-lock and encrypted backups.
+  What Hedgehog Bits can do: an encrypted iPhone vault for notes, photos, videos and files, with folders, search, a document scanner, a decoy vault, flip-to-lock, optional sync and encrypted backups.
 lead: >-
   A focused set of tools for keeping private things private. Everything below works
-  offline, on your iPhone, without an account.
+  on your iPhone without an account, and everything except sync works offline.
 permalink: /features/
+last_modified_at: 2026-11-24
 ---
 
 ## Opening the vault
@@ -80,10 +81,22 @@ If someone makes you open the app, you can give them a different password.
 
 A decoy is made to fool a person looking at your phone. Read [what a disguise can and cannot do]({{ site.baseurl }}{% post_url 2026-11-02-what-a-disguise-can-and-cannot-do %}) for its limits.
 
+## Optional, safe sync
+
+Lose your iPhone, not your photos. **Settings → Sync** keeps the vault the same on your iPhone, iPad or a second iPhone. It's part of Hedgehog Bits Plus, and off until you turn it on.
+
+- Sync through **your own iCloud**, in a private area only the app can use, or through **a folder you choose** in the Files app, such as Google Drive, Dropbox, OneDrive or a drive at home.
+- Only encrypted files leave your iPhone. The storage company can't see names or contents.
+- On another device, tap **Join a Synced Vault…** on the first screen and enter your password.
+- A decoy vault stays hidden in the synced copy too.
+
+Read [how to sync private files between iPhone and iPad]({{ site.baseurl }}{% post_url 2026-11-23-sync-private-files-between-iphone-and-ipad %}).
+
 ## Backup and moving to a new iPhone
 
-The vault is deliberately left out of iCloud backups, computer backups and Quick Start phone-to-phone transfer. You decide where copies go.
+By default the vault is left out of iCloud backups, computer backups and Quick Start phone-to-phone transfer. You decide where copies go.
 
+- **Include in iPhone Backups** puts the encrypted vault in your iCloud or computer backups, so setting up a new iPhone from a backup brings it back. For iCloud, iCloud Backup must be on in your iPhone's Settings.
 - **Export Backup** saves the whole vault as one `.hhbits` file, still encrypted. Keep it on a Mac, a USB drive or any storage you trust.
 - **Restore from Backup** on a new iPhone brings back your folders, files and password exactly as they were.
 - Restoring is all-or-nothing. Every item is checked before anything is written, so a damaged file can't leave you with half a vault.
@@ -96,8 +109,11 @@ Read more in [Moving your vault to a new iPhone]({{ site.baseurl }}{% post_url 2
 - **Change password.** Only the key that protects your files is re-encrypted, so this is quick even for large vaults.
 - **Lock when placed face down.** On by default.
 - **Decoy vault.** Set it up, change its password or remove it.
+- **Sync.** Off, iCloud or a folder you choose (Plus).
+- **Include in iPhone Backups.** Off by default.
 - **Storage.** See how much space the vault uses.
-- **Erase vault.** Permanently deletes everything on the iPhone, including any decoy, and lets you start over with a new password. You type ERASE to confirm.
+- **Erase vault.** Permanently deletes everything on the iPhone, including any decoy, and lets you start over with a new password. You choose whether the synced copy goes too. You type ERASE to confirm.
+- **Feedback.** Rate the app, request a feature, or report a bug or a security issue by email.
 
 ## The games
 
@@ -138,6 +154,7 @@ The cover is a set of ten complete games with personal bests, styled to look cal
       <li>Everything in Free</li>
       <li><strong>No item limit</strong></li>
       <li><strong>Decoy vault</strong>, with its own password</li>
+      <li><strong>Optional, safe sync</strong> through your iCloud or a folder you choose</li>
     </ul>
     <p class="muted">Prices are shown in your currency on the App Store.</p>
   </div>
@@ -149,6 +166,6 @@ Nothing you've stored is ever locked away. With or without Plus, everything in y
 
 - iPhone with {{ site.app.os_requirement }}
 - About as much free storage as the files you want to keep
-- No network connection needed
+- No network connection needed, except for sync
 
 <div class="actions">{% include app-store-button.html %}<a class="button button-secondary" href="{{ '/security/' | relative_url }}">Security design</a></div>

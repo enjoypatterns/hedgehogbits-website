@@ -3,6 +3,7 @@ title: Selling or trading in your iPhone without losing your vault
 description: >-
   How to move a Hedgehog Bits vault to your new iPhone and make sure nothing private
   is left on the old one before you sell it, trade it in or give it away.
+last_modified_at: 2026-11-24
 tags: [how-to, backup, iphone]
 image:
   path: /assets/blog/sell-or-trade-in-iphone-safely-social.jpg
@@ -19,7 +20,9 @@ When you replace a phone, two things matter: your files should arrive safely on 
 
 ## Step 1: Move the vault first
 
-The vault isn't carried across by Quick Start or iCloud Backup, so move it yourself before you erase anything.
+If you use sync (Hedgehog Bits Plus), install Hedgehog Bits on the new phone, tap **Join a Synced Vault…** and enter your password, then check your files are there before you erase the old one. Erasing the old phone doesn't touch the synced copy.
+
+Otherwise, unless you turned on **Include in iPhone Backups**, the vault isn't carried across by Quick Start or iCloud Backup, so move it yourself before you erase anything.
 
 1. On the old phone, open the vault and choose **Settings → Export Backup…**
 2. Save the `.hhbits` file to Files, AirDrop it to a Mac, or copy it to a USB drive.

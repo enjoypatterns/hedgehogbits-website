@@ -3,17 +3,18 @@ title: Security design
 eyebrow: Security
 description: >-
   How Hedgehog Bits protects your data: Argon2id, per-item keys, chunked
-  AES-256-GCM, iOS hardening, encrypted backups and known limitations.
+  AES-256-GCM, iOS hardening, optional encrypted sync and backups, and known limitations.
 lead: >-
   This page describes how the vault is built, what it protects against and where its
   limits are. We would rather you understand the design than take it on trust.
 permalink: /security/
+last_modified_at: 2026-11-24
 ---
 
 ## Summary
 
-- Your data is encrypted on your iPhone and never leaves it unless you export a backup.
-- There is no server, account or recovery mechanism. Only your password can open the vault.
+- Your data is encrypted on your iPhone. It leaves the phone only if you turn on sync or iPhone backups, or export a backup, and then only encrypted.
+- There is no server of ours, no account and no recovery mechanism. Only your password can open the vault.
 - The design uses standard primitives: **Argon2id**, **HKDF** and **AES-256-GCM**, through Apple CryptoKit and libsodium.
 
 ## From password to key
@@ -40,7 +41,7 @@ permalink: /security/
 
 ## iOS hardening
 
-- The vault is excluded from backups and uses iOS `FileProtection.complete`, so its files are also protected by the device passcode while the phone is locked.
+- The vault is excluded from iCloud and computer backups unless you turn on **Include in iPhone Backups**, and uses iOS `FileProtection.complete`, so its files are also protected by the device passcode while the phone is locked.
 - The vault locks the moment the app leaves the foreground.
 - The app switcher snapshot shows only the hedgehog.
 - Third-party keyboards are blocked.
@@ -57,12 +58,23 @@ A backup is the vault's own ciphertext packed into one file. It is never decrypt
 - **Locking stops it.** Locking cancels an export or restore in progress, so the key isn't held in the background.
 - **What a backup reveals.** Roughly how large the vault is and how many items it holds.
 
+## Sync and iPhone backups
+
+Both are optional and off until you turn them on. Neither decrypts anything: what leaves the phone is the vault's own ciphertext, the same files that are on the iPhone.
+
+- **Sync** (part of Hedgehog Bits Plus) goes through your own iCloud, in a private area only the app can use, or a folder you choose in the Files app. The storage provider sees how many files there are, roughly how big they are and when they change, but no names or contents.
+- **The decoy stays hidden.** The synced copy looks the same with or without a decoy vault. If someone makes you open a decoy and points sync somewhere of theirs, the real vault doesn't sync there unless you agree.
+- **Merging is safe.** Files go up before the index that names them, so another device never sees half a change. A note edited on two devices keeps both versions.
+- **iPhone backups** include the encrypted vault in your iCloud or computer backups, so restoring a whole phone brings it back.
+
+A copy outside the phone doesn't have the iPhone's passcode protection. Anyone holding it can try passwords against it on their own computers, at Argon2id speed. That is why a long password matters most if you sync or back up. [How to sync private files between iPhone and iPad]({{ site.baseurl }}{% post_url 2026-11-23-sync-private-files-between-iphone-and-ipad %}) covers sync in detail.
+
 ## What this protects against
 
 - Someone who picks up or borrows your unlocked phone and opens the app.
 - Someone who copies the app's files from the device or a backup without your password.
 - Modified or damaged backup files.
-- Your data being exposed through a cloud service, because there isn't one.
+- Your data being exposed through a cloud service. We run none, and a copy you sync or back up is encrypted before it leaves your iPhone.
 
 ## Known limitations
 
@@ -71,7 +83,8 @@ We think it is important to be clear about these.
 - **The password is visible as you type it.** The name field shows letters, like any name field. Be aware of who can see your screen. The field clears when the app leaves the foreground.
 - **Recently Deleted.** Photos removed from your library after import stay in the Photos app's *Recently Deleted* album for up to 30 days. Empty that album too.
 - **No recovery.** If you forget the password, the vault cannot be opened, by you or by us.
-- **Lost phone, lost vault.** Without an exported backup, erasing or losing the iPhone means losing the vault.
+- **Lost phone, lost vault, unless you keep a copy.** Without sync, an iPhone backup that includes the vault, or an exported backup, erasing or losing the iPhone means losing the vault.
+- **Copies can be attacked offline.** A synced or backed-up copy can be tested against password guesses away from your iPhone. Choose a long password.
 - **The cover is not encryption.** The games make the app look ordinary. Someone who knows about Hedgehog Bits knows a vault may be inside. Your protection comes from the encryption and a strong password. See [what a disguise can and cannot do]({{ site.baseurl }}{% post_url 2026-11-02-what-a-disguise-can-and-cannot-do %}).
 - **A compromised device.** No app can protect data on a phone that is already under someone else's control, for example through malware or a jailbreak.
 
